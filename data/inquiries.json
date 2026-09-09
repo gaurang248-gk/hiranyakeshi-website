@@ -1,5 +1,20 @@
 [
   {
+    "id": "INQ-MTU5SWF9",
+    "name": "GAURANG",
+    "email": "gaurangkuwar248@gmail.com",
+    "phone": "N/A",
+    "category": "Distribution & Dealership",
+    "subject": "S",
+    "message": "S",
+    "farmSize": null,
+    "paddyVariety": null,
+    "location": null,
+    "status": "New",
+    "createdAt": "2026-09-09T13:53:49.605Z",
+    "formattedDate": "9 Sept 2026, 07:23 pm"
+  },
+  {
     "id": "INQ-MTU572GC",
     "name": "www",
     "email": "gaurangkuwar248@gmail.com",
