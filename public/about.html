@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | Hiranyakeshi Agrotech Pvt. Ltd.</title>
+
+  <!-- SEO Meta Tags -->
+  <meta name="description"
+    content="Learn about Hiranyakeshi Agrotech Pvt. Ltd., our story, vision, integrated farm-to-consumer approach, and our leadership team led by Ankush N Shetage and Meena A Shetage.">
+  <meta name="keywords"
+    content="About Hiranyakeshi Agrotech, Ankush N Shetage, Meena A Shetage, paddy farming, agro leadership, mission vision">
+  <meta name="author" content="Hiranyakeshi Agrotech Pvt. Ltd.">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="About Us | Hiranyakeshi Agrotech Pvt. Ltd.">
+  <meta property="og:description"
+    content="Bridging the gap between farmers and consumers by adding real value at every stage.">
+  <meta property="og:image" content="/images/farmers.jpg">
+
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌾</text></svg>">
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <header class="site-header" id="navbar">
+    <div class="container nav-container">
+      <a href="/" class="brand-logo" aria-label="Hiranyakeshi Agrotech Home">
+        <div class="logo-icon-box">🌾</div>
+        <div class="logo-text-group">
+          <span class="logo-title">Hiranyakeshi Agrotech</span>
+          <span class="logo-tagline">Farmer First. Women Led. Naturally Better.</span>
+        </div>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="/" class="nav-link">Home</a></li>
+
+          <!-- About Us Dropdown -->
+          <li class="nav-item has-dropdown">
+            <button class="nav-link dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+              About Us
+              <svg class="dropdown-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a href="/about" class="dropdown-item">About Us</a></li>
+              <li><a href="/infrastructure" class="dropdown-item">Infrastructure</a></li>
+              <li><a href="/quality" class="dropdown-item">Quality Assurance &amp; Certifications</a></li>
+              <li><a href="/sustainability" class="dropdown-item">Sustainability &amp; CSR</a></li>
+            </ul>
+          </li>
+
+          <!-- What We Do Dropdown -->
+          <li class="nav-item has-dropdown">
+            <button class="nav-link dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+              What We Do
+              <svg class="dropdown-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a href="/value-chain" class="dropdown-item">Value Chain</a></li>
+            </ul>
+          </li>
+
+          <!-- Products Dropdown -->
+          <li class="nav-item has-dropdown">
+            <button class="nav-link dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+              Products
+              <svg class="dropdown-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a href="/products" class="dropdown-item">Products</a></li>
+              <li><a href="/export-b2b" class="dropdown-item">Export &amp; B2B</a></li>
+            </ul>
+          </li>
+          <li><a href="/for-farmers" class="nav-link">For Farmers</a></li>
+          <li><a href="/blog" class="nav-link">Blog</a></li>
+          <li><a href="/contact" class="nav-link nav-cta-btn">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <button class="mobile-toggle-btn" id="mobileMenuToggle" aria-label="Open Mobile Menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-backdrop" id="mobileBackdrop"></div>
+  <aside class="mobile-drawer" id="mobileDrawer">
+    <div>
+      <div class="mobile-drawer-header">
+        <div class="brand-logo">
+          <div class="logo-icon-box">🌾</div>
+          <div class="logo-text-group">
+            <span class="logo-title">Hiranyakeshi</span>
+            <span class="logo-tagline">Agrotech Pvt. Ltd.</span>
+          </div>
+        </div>
+        <button id="closeDrawerBtn"
+          style="background:none; border:none; color:var(--color-sandstone); font-size:1.8rem; cursor:pointer;">&times;</button>
+      </div>
+
+    </div>
+    <ul class="mobile-nav-links">
+      <li><a href="/" class="mobile-nav-link">Home</a></li>
+
+      <!-- Mobile About Us Dropdown -->
+      <li class="mobile-nav-item has-mobile-dropdown">
+        <button class="mobile-dropdown-toggle" aria-expanded="false">
+          <span>About Us</span>
+          <svg class="mobile-dropdown-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
+        <ul class="mobile-submenu">
+          <li><a href="/about" class="mobile-submenu-link">About Us</a></li>
+          <li><a href="/infrastructure" class="mobile-submenu-link">Infrastructure</a></li>
+          <li><a href="/quality" class="mobile-submenu-link">Quality Assurance &amp; Certifications</a></li>
+          <li><a href="/sustainability" class="mobile-submenu-link">Sustainability &amp; CSR</a></li>
+        </ul>
+      </li>
+
+      <!-- Mobile What We Do Dropdown -->
+      <li class="mobile-nav-item has-mobile-dropdown">
+        <button class="mobile-dropdown-toggle" aria-expanded="false">
+          <span>What We Do</span>
+          <svg class="mobile-dropdown-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
+        <ul class="mobile-submenu">
+          <li><a href="/value-chain" class="mobile-submenu-link">Value Chain</a></li>
+        </ul>
+      </li>
+
+      <!-- Mobile Products Dropdown -->
+      <li class="mobile-nav-item has-mobile-dropdown">
+        <button class="mobile-dropdown-toggle" aria-expanded="false">
+          <span>Products</span>
+          <svg class="mobile-dropdown-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
+        <ul class="mobile-submenu">
+          <li><a href="/products" class="mobile-submenu-link">Products</a></li>
+          <li><a href="/export-b2b" class="mobile-submenu-link">Export &amp; B2B</a></li>
+        </ul>
+      </li>
+      <li><a href="/for-farmers" class="mobile-nav-link">For Farmers</a></li>
+      <li><a href="/blog" class="mobile-nav-link">Blog</a></li>
+      <li><a href="/contact" class="mobile-nav-link">Contact</a></li>
+      <li><a href="/admin" class="mobile-nav-link" style="color:var(--color-olive-clay); font-size:0.95rem;">Review
+          Inquiries (Admin)</a></li>
+    </ul>
+    </div>
+    <div class="mobile-drawer-footer">
+      <a href="/contact" class="btn btn-accent" style="width:100%;">Get In Touch</a>
+    </div>
+  </aside>
+
+  <!-- PAGE BANNER -->
+  <div class="page-banner">
+    <div class="container page-banner-content">
+      <span class="section-tag light">Our Identity & Heritage</span>
+      <h1 style="text-align: center; color: var(--color-olive);">
+        <span
+          style="display: block; font-size: 1.5rem; font-weight: 300; color: var(--color-sandstone-dark); font-family: var(--font-heading); margin-bottom: 8px;">About</span>
+        <span style="display: block; font-size: 3.2rem; font-weight: 700; font-style: normal;">Hiranyakeshi
+          Agrotech</span>
+      </h1>
+      <p>Building an integrated agro-value chain that empowers farmers and delivers unmatched grain quality to
+        consumers.</p>
+    </div>
+  </div>
+
+  <!-- 1. INTRO SECTION ("Who We Are") & 2. OUR STORY -->
+  <section class="section-padding bg-sandstone-light">
+    <div class="container">
+      <div class="about-snapshot-grid">
+        <div class="about-text-content">
+          <span class="section-tag">Who We Are</span>
+          <h2>A Transformative Force in Grain Agriculture</h2>
+          <p class="lead" style="margin: 18px 0 20px;">
+            Hiranyakeshi Agrotech Pvt. Ltd. is totally women-led agri-business enterprise built with a clear purpose—to
+            create a stronger connection between farmers, sustainable agriculture, modern processing and the market.
+          </p>
+          <p style="margin-bottom: 24px; color: var(--color-dark-bark-muted);">
+            We grow paddy through our own farms and also source it directly from farmers, ensuring quality and value at
+            every step of the journey. Currently, our primary grain handled is paddy (rice) only, allowing us to bring
+            laser-sharp focus and operational depth to every single kernel.
+          </p>
+
+          <div
+            style="background-color: var(--color-sandstone); padding: 24px; border-radius: var(--radius-md); border-left: 4px solid var(--color-deep-pine); margin-top: 24px;">
+            <h3 style="font-size: 1.3rem; margin-bottom: 8px; color: var(--color-deep-pine);">Our Story</h3>
+            <p style="font-size: 0.98rem; color: var(--color-dark-bark); line-height: 1.6;">
+              Hiranyakeshi Agrotech was founded with a simple vision — to bridge the gap between farmers and consumers
+              by adding real value at every stage, from procurement to distribution. By taking ownership of the value
+              chain, we ensure farmers receive honest returns while consumers receive rice of uncompromised purity and
+              standard.
+            </p>
+          </div>
+        </div>
+
+        <div class="about-image-card">
+          <img src="/images/farmers.jpg" alt="Hiranyakeshi Agrotech Farmer Integration" loading="lazy">
+          <div class="about-badge-floating">
+            <strong>Bridging the Gap</strong>
+            <span>Direct Farm to Table</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. WHAT WE DO ("Our Integrated Approach") -->
+  <section class="section-padding bg-sandstone">
+    <div class="container">
+      <div class="section-heading-wrap text-center">
+        <span class="section-tag">Core Capabilities</span>
+        <h2>Our Integrated Approach</h2>
+        <p>End-to-end synergy across cultivation, processing, packaging, and pan-India distribution.</p>
+      </div>
+
+      <div class="feature-grid-4" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+        <!-- 1. Own Farms -->
+        <div class="feature-box">
+          <div class="feature-icon-circle">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"></path>
+            </svg>
+          </div>
+          <h4>Own Farms</h4>
+          <p>Growing quality paddy directly on company-managed acreage using scientifically optimized cultivation and
+            harvest techniques.</p>
+        </div>
+
+        <!-- 2. Procurement -->
+        <div class="feature-box">
+          <div class="feature-icon-circle">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+            </svg>
+          </div>
+          <h4>Procurement</h4>
+          <p>Sourcing directly from trusted farmer networks with calibrated digital weighbridges and fair spot-market
+            valuations.</p>
+        </div>
+
+        <!-- 3. Quality Control -->
+        <div class="feature-box">
+          <div class="feature-icon-circle">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <h4>Quality Control</h4>
+          <p>Ensuring every batch meets high benchmarks for moisture stability, grain length, chalkiness, and purity.
+          </p>
+        </div>
+
+        <!-- 4. Processing, Grading & Sorting -->
+        <div class="feature-box">
+          <div class="feature-icon-circle">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="3"></circle>
+              <path
+                d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z" />
+            </svg>
+          </div>
+          <h4>Processing, Grading & Sorting</h4>
+          <p>State-of-the-art milling, color sortex optical grading, and destoning ensuring uniform, export-ready grain
+            appearance.</p>
+        </div>
+
+        <!-- 5. Packaging & Branding -->
+        <div class="feature-box">
+          <div class="feature-icon-circle">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path
+                d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z">
+              </path>
+            </svg>
+          </div>
+          <h4>Packaging & Branding</h4>
+          <p>Consumer-ready moisture-proof packaging branded with traceability and verified nutritional standards.</p>
+        </div>
+
+        <!-- 6. Marketing & Distribution -->
+        <div class="feature-box">
+          <div class="feature-icon-circle">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="1" y="3" width="15" height="13"></rect>
+              <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+              <circle cx="5.5" cy="18.5" r="2.5"></circle>
+              <circle cx="18.5" cy="18.5" r="2.5"></circle>
+            </svg>
+          </div>
+          <h4>Marketing & Distribution</h4>
+          <p>Farm to consumer, seamlessly — fulfilling bulk grain demands for mills, food companies, and retail
+            distributor channels.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. VISION & 5. MISSION SECTION -->
+  <section class="section-padding bg-deep-pine" id="vision-mission">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: stretch;">
+        <!-- Vision -->
+        <div
+          style="background-color: rgba(255,255,255,0.05); padding: 44px; border-radius: var(--radius-lg); border: 2px solid var(--color-olive-clay); display:flex; flex-direction:column; justify-content:space-between;">
+          <span class="section-tag light">Our North Star</span>
+          <h3 style="font-size: 2rem; color: var(--color-sandstone); margin-bottom: 20px;">Our Vision</h3>
+          <blockquote
+            style="font-family: var(--font-heading); font-size: 1.55rem; font-style: italic; line-height: 1.6; color: var(--color-sandstone-light); border-left: 3px solid var(--color-olive-clay); padding-left: 20px; margin-bottom: 24px;">
+            "To build a globally respected, women-led and farmer-first agri-business that
+            transforms Indian agriculture through sustainable farming, modern processing
+            and value-added products."
+          </blockquote>
+
+          <p
+            style="color: var(--color-sandstone); font-size: 1.50rem; margin-bottom: 16px; opacity: 0.9; font-weight: 700;">
+            We envision an agricultural ecosystem where:
+          </p>
+
+          <ul style="list-style: none; padding-left: 0; margin: 0;">
+            <li
+              style="padding: 8px 0 8px 28px; position: relative; font-weight: 600; color: var(--color-sandstone-light); font-size: 1.1rem;">
+              <span style="position:absolute; left:0; color: var(--color-olive-clay);">✓</span>
+              Farmers prosper.
+            </li>
+            <li
+              style="padding: 8px 0 8px 28px; position: relative; font-weight: 600; color: var(--color-sandstone-light); font-size: 1.1rem;">
+              <span style="position:absolute; left:0; color: var(--color-olive-clay);">✓</span>
+              Women lead.
+            </li>
+            <li
+              style="padding: 8px 0 8px 28px; position: relative; font-weight: 600; color: var(--color-sandstone-light); font-size: 1.1rem;">
+              <span style="position:absolute; left:0; color: var(--color-olive-clay);">✓</span>
+              Agriculture becomes sustainable.
+            </li>
+            <li
+              style="padding: 8px 0 8px 28px; position: relative; font-weight: 600; color: var(--color-sandstone-light); font-size: 1.1rem;">
+              <span style="position:absolute; left:0; color: var(--color-olive-clay);">✓</span>
+              Consumers receive quality products.
+            </li>
+            <li
+              style="padding: 8px 0 8px 28px; position: relative; font-weight: 600; color: var(--color-sandstone-light); font-size: 1.1rem;">
+              <span style="position:absolute; left:0; color: var(--color-olive-clay);">✓</span>
+              And Indian agricultural products reach markets across the world.
+            </li>
+          </ul>
+        </div>
+
+        <!-- Mission -->
+        <div
+          style="background-color: rgba(255,255,255,0.05); padding: 44px; border-radius: var(--radius-lg); border: 1px solid rgba(178,166,103,0.3);">
+          <span class="section-tag light">Strategic Commitments</span>
+          <h3 style="font-size: 2rem; color: var(--color-sandstone); margin-bottom: 20px;">Our Mission</h3>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 16px;">
+            <li style="display: flex; align-items: flex-start; gap: 12px;">
+              <span style="color: var(--color-olive-clay); font-weight: bold; font-size: 1.2rem;">✔</span>
+              <p style="color: rgba(241,227,194,0.9); font-size: 1.05rem;">Empower Farmers — Build long-term
+                relationships with farmers and bring them to the forefront of the value chain.</p>
+            </li>
+            <li style="display: flex; align-items: flex-start; gap: 12px;">
+              <span style="color: var(--color-olive-clay); font-weight: bold; font-size: 1.2rem;">✔</span>
+              <p style="color: rgba(241,227,194,0.9); font-size: 1.05rem;">Promote Scientific Agriculture — Connect
+                farmers with agricultural experts, knowledge and modern farming practices.</p>
+            </li>
+            <li style="display: flex; align-items: flex-start; gap: 12px;">
+              <span style="color: var(--color-olive-clay); font-weight: bold; font-size: 1.2rem;">✔</span>
+              <p style="color: rgba(241,227,194,0.9); font-size: 1.05rem;">Advance Sustainable & Organic Farming —
+                Encourage practical adoption of organic and environmentally responsible methods.</p>
+            </li>
+            <li style="display: flex; align-items: flex-start; gap: 12px;">
+              <span style="color: var(--color-olive-clay); font-weight: bold; font-size: 1.2rem;">✔</span>
+              <p style="color: rgba(241,227,194,0.9); font-size: 1.05rem;">Build a Women-Led Value Chain — Create
+                opportunities for women in agriculture, processing, entrepreneurship and leadership.</p>
+            </li>
+            <li style="display: flex; align-items: flex-start; gap: 12px;">
+              <span style="color: var(--color-olive-clay); font-weight: bold; font-size: 1.2rem;">✔</span>
+              <p style="color: rgba(241,227,194,0.9); font-size: 1.05rem;">Add Value at Source — Transform produce
+                through modern processing, technology, and innovative value addition.</p>
+            </li>
+            <li style="display: flex; align-items: flex-start; gap: 12px;">
+              <span style="color: var(--color-olive-clay); font-weight: bold; font-size: 1.2rem;">✔</span>
+              <p style="color: rgba(241,227,194,0.9); font-size: 1.05rem;">Connect Farmers to Markets — Build efficient,
+                transparent links to domestic and international markets.</p>
+            </li>
+            <li style="display: flex; align-items: flex-start; gap: 12px;">
+              <span style="color: var(--color-olive-clay); font-weight: bold; font-size: 1.2rem;">✔</span>
+              <p style="color: rgba(241,227,194,0.9); font-size: 1.05rem;">Deliver Trusted Quality — Maintain high
+                standards of quality, food safety, consistency and traceability.</p>
+            </li>
+            <li style="display: flex; align-items: flex-start; gap: 12px;">
+              <span style="color: var(--color-olive-clay); font-weight: bold; font-size: 1.2rem;">✔</span>
+              <p style="color: rgba(241,227,194,0.9); font-size: 1.05rem;">Create Sustainable Prosperity — Build a
+                commercially successful enterprise while contributing to farmers, women and communities.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. WHY HIRANYAKESHI AGROTECH (4 BOXES) -->
+  <section class="section-padding bg-sandstone-light">
+    <div class="container">
+      <div class="section-heading-wrap text-center">
+        <span class="section-tag">Value Proposition</span>
+        <h2>Why Hiranyakeshi Agrotech</h2>
+        <p>Strategic differentiators that redefine modern agri-commodity supply chains.</p>
+      </div>
+
+      <div class="feature-grid-4">
+        <div class="feature-box">
+          <div class="feature-icon-circle">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+            </svg>
+          </div>
+          <h4>Farm-to-Consumer Model</h4>
+          <p>Complete integration from the field to consumer doorsteps, maintaining unbroken quality custody and
+            traceability.</p>
+        </div>
+
+        <div class="feature-box">
+          <div class="feature-icon-circle">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path
+                d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z">
+              </path>
+            </svg>
+          </div>
+          <h4>Farmer Welfare at Core</h4>
+          <p>Direct monetization, prompt payments, and soil enrichment partnerships that make paddy farming lucrative
+            and resilient.</p>
+        </div>
+
+        <div class="feature-box">
+          <div class="feature-icon-circle">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+          </div>
+          <h4>Strict Quality Standards</h4>
+          <p>Automated optical sortex, zero chemical adulterants, and strict moisture calibration for pristine grain
+            texture and aroma.</p>
+        </div>
+
+        <div class="feature-box">
+          <div class="feature-icon-circle">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 14 14"></polyline>
+            </svg>
+          </div>
+          <h4>End-to-End Control</h4>
+          <p>Zero middlemen dependency, ensuring cost efficiencies are shared directly between the grower and the buyer.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. LEADERSHIP / TEAM SECTION -->
+  <section class="section-padding bg-sandstone" id="leadership">
+    <div class="container">
+      <div class="section-heading-wrap text-center">
+        <span class="section-tag">Visionaries Behind the Mission</span>
+        <h2>Our Leadership</h2>
+        <p>Passionate agricultural pioneers committed to reshaping India's rice supply chain.</p>
+      </div>
+
+      <div class="leadership-grid">
+        <!-- Card 1: Founder -->
+        <div class="leader-card">
+          <div class="leader-avatar">AS</div>
+          <h3 class="leader-name">Ankush N Shetage</h3>
+          <span class="leader-designation">Founder</span>
+          <p class="leader-bio">
+            "Driving the vision of an integrated, farmer-first agri value chain."
+          </p>
+        </div>
+
+        <!-- Card 2: Chairman -->
+        <div class="leader-card">
+          <div class="leader-avatar">MS</div>
+          <h3 class="leader-name">Meena A Shetage</h3>
+          <span class="leader-designation">Chairman</span>
+          <p class="leader-bio">
+            "Leading the company's mission to empower farmers and deliver quality to consumers."
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" id="siteFooter">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Col 1: Company Info -->
+        <div class="footer-col">
+          <a href="/" class="brand-logo" style="margin-bottom:14px; display:inline-flex;">
+            <div class="logo-icon-box">🌾</div>
+            <div class="logo-text-group">
+              <span class="logo-title">Hiranyakeshi Agrotech</span>
+              <span class="logo-tagline">Pvt. Ltd.</span>
+            </div>
+          </a>
+          <p class="footer-about-text">
+            Integrated farm-to-consumer value chain for paddy and rice.
+          </p>
+          <div class="social-links-row">
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn"
+              aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"></path>
+                <rect x="2" y="9" width="4" height="12"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn"
+              aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+              </svg>
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn"
+              aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Navigation Links -->
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="/">› Home</a></li>
+            <li><a href="/about">› About Us</a></li>
+            <li><a href="/infrastructure">› Infrastructure</a></li>
+            <li><a href="/quality">› Quality &amp; Certifications</a></li>
+            <li><a href="/sustainability">› Sustainability &amp; CSR</a></li>
+            <li><a href="/value-chain">› Value Chain</a></li>
+            <li><a href="/products">› Products</a></li>
+            <li><a href="/for-farmers">› For Farmers</a></li>
+            <li><a href="/blog">› News &amp; Updates</a></li>
+            <li><a href="/contact">› Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Contact Info -->
+        <div class="footer-col">
+          <h4>Contact Info</h4>
+          <ul class="footer-links">
+            <li><span>📍 Registered Office, Agro Hub</span></li>
+            <li><a href="tel:+919876543210">📞 +91 98765 43210</a></li>
+            <li><a href="mailto:hiranyakeshi.agrotech@gmail.com">✉️ hiranyakeshi.agrotech@gmail.com</a></li>
+            <li><span>⏰ Mon – Sat: 10:00 AM – 5:00 PM</span></li>
+            <li><a href="/admin" style="color:var(--color-olive-clay); margin-top:8px;">🔒 Admin / Inquiries Tray</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Stay Connected -->
+        <div class="footer-col">
+          <h4>Stay Connected</h4>
+          <p style="font-size:0.92rem; color:rgba(241,227,194,0.8); margin-bottom:12px;">
+            Subscribe for seasonal paddy harvest updates, market trends, and agri insights.
+          </p>
+          <form class="newsletter-form">
+            <input type="email" class="newsletter-input" placeholder="Enter your email" required
+              aria-label="Newsletter email address">
+            <button type="submit" class="btn btn-accent btn-sm">Join</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom">
+        <p style="color: var(--color-sandstone);">© 2026 Hiranyakeshi Agrotech Pvt. Ltd. All Rights Reserved.</p>
+        <div style="display:flex; gap:16px; flex-wrap:wrap;">
+          <a href="/contact">Privacy Policy</a>
+          <a href="/contact">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast-container"></div>
+  <script src="/js/app.js"></script>
+  <script src="/js/footer.js"></script>
+</body>
+
+</html>

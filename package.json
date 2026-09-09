@@ -1,0 +1,15 @@
+{
+  "name": "hiranyakeshi-agrotech",
+  "version": "1.0.0",
+  "description": "Professional modern website for Hiranyakeshi Agrotech Pvt. Ltd.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "nodemailer": "^6.9.13"
+  }
+}

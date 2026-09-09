@@ -1,0 +1,45 @@
+[
+  {
+    "id": "INQ-MTJZ8AQD",
+    "name": "Baburao Patil",
+    "email": "contact_1788346328917@hiranyakeshi.in",
+    "phone": "+91 94220 99887",
+    "category": "Farmer Partnership",
+    "subject": "Farmer Network Partnership Application",
+    "message": "Cultivating 8 acres of Indrayani paddy in Ajara. Ready for harvest in 3 weeks.",
+    "farmSize": "8 Acres",
+    "paddyVariety": "Indrayani & Super Fine",
+    "location": "Ajara, Kolhapur",
+    "status": "New",
+    "createdAt": "2026-09-02T10:52:08.917Z",
+    "formattedDate": "2 Sept 2026, 04:22 pm"
+  },
+  {
+    "id": "INQ-MTJXA7GI",
+    "name": "Gopal Shinde",
+    "email": "gopal.shinde@farmer.in",
+    "phone": "+91 94230 54321",
+    "category": "Farmer Partnership",
+    "subject": "Farmer Network Partnership",
+    "message": "I have 12 acres of Indrayani and Super Fine paddy ready for harvest next month. Looking to partner with Hiranyakeshi for direct procurement.",
+    "farmSize": "12 Acres",
+    "location": "Ajara",
+    "status": "New",
+    "createdAt": "2026-09-02T09:57:38.754Z",
+    "formattedDate": "2 Sept 2026, 03:27 pm"
+  },
+  {
+    "id": "INQ-MTJXA7ES",
+    "name": "Sunil Deshmukh",
+    "email": "sunil.d@agripartner.in",
+    "phone": "+91 98220 12345",
+    "category": "Bulk Rice Buyer",
+    "subject": "50 Metric Tons Silky Sortex Inquiry",
+    "message": "Interested in ordering 50 MT Silky Sortex White Rice for Mumbai distribution. Please send spec sheet and FOB quotes.",
+    "farmSize": null,
+    "location": "Mumbai, Maharashtra",
+    "status": "New",
+    "createdAt": "2026-09-02T09:57:38.692Z",
+    "formattedDate": "2 Sept 2026, 03:27 pm"
+  }
+]

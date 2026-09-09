@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>News &amp; Updates | Hiranyakeshi Agrotech Pvt. Ltd.</title>
+  <meta name="description"
+    content="Stay updated with the latest happenings at Hiranyakeshi Agrotech — from farming season updates to company milestones and industry insights.">
+  <link rel="canonical" href="http://localhost:3000/blog">
+  <meta property="og:title" content="News &amp; Updates | Hiranyakeshi Agrotech Pvt. Ltd.">
+  <meta property="og:description"
+    content="Stay updated with the latest happenings at Hiranyakeshi Agrotech — from farming season updates to company milestones and industry insights.">
+  <meta property="og:image" content="/images/farmers.jpg">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌾</text></svg>">
+</head>
+
+<body>
+
+  <!-- STICKY NAVBAR -->
+  <header class="site-header" id="navbar">
+    <div class="container nav-container">
+      <a href="/" class="brand-logo" aria-label="Hiranyakeshi Agrotech Home">
+        <div class="logo-icon-box">🌾</div>
+        <div class="logo-text-group">
+          <span class="logo-title">Hiranyakeshi</span>
+          <span class="logo-tagline">Agrotech Pvt. Ltd.</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="/" class="nav-link">Home</a></li>
+
+          <!-- About Us Dropdown -->
+          <li class="nav-item has-dropdown">
+            <button class="nav-link dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+              About Us
+              <svg class="dropdown-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a href="/about" class="dropdown-item">About Us</a></li>
+              <li><a href="/infrastructure" class="dropdown-item">Infrastructure</a></li>
+              <li><a href="/quality" class="dropdown-item">Quality Assurance &amp; Certifications</a></li>
+              <li><a href="/sustainability" class="dropdown-item">Sustainability &amp; CSR</a></li>
+            </ul>
+          </li>
+
+          <!-- What We Do Dropdown -->
+          <li class="nav-item has-dropdown">
+            <button class="nav-link dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+              What We Do
+              <svg class="dropdown-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a href="/value-chain" class="dropdown-item">Value Chain</a></li>
+            </ul>
+          </li>
+
+          <!-- Products Dropdown -->
+          <li class="nav-item has-dropdown">
+            <button class="nav-link dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+              Products
+              <svg class="dropdown-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a href="/products" class="dropdown-item">Products</a></li>
+              <li><a href="/export-b2b" class="dropdown-item">Export &amp; B2B</a></li>
+            </ul>
+          </li>
+          <li><a href="/for-farmers" class="nav-link">For Farmers</a></li>
+          <li><a href="/blog" class="nav-link active">Blog</a></li>
+          <li><a href="/contact" class="nav-link nav-cta-btn">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- Mobile Hamburger Toggle -->
+    <button class="mobile-toggle-btn" id="mobileMenuToggle" aria-label="Open Mobile Menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-backdrop" id="mobileBackdrop"></div>
+  <aside class="mobile-drawer" id="mobileDrawer">
+    <div>
+      <div class="mobile-drawer-header">
+        <div class="brand-logo">
+          <div class="logo-icon-box">🌾</div>
+          <div class="logo-text-group">
+            <span class="logo-title">Hiranyakeshi</span>
+            <span class="logo-tagline">Agrotech Pvt. Ltd.</span>
+          </div>
+        </div>
+        <button id="closeDrawerBtn"
+          style="background:none; border:none; color:var(--color-sandstone); font-size:1.8rem; cursor:pointer;"
+          aria-label="Close Menu">&times;</button>
+      </div>
+
+    </div>
+    <ul class="mobile-nav-links">
+      <li><a href="/" class="mobile-nav-link">Home</a></li>
+
+      <!-- Mobile About Us Dropdown -->
+      <li class="mobile-nav-item has-mobile-dropdown">
+        <button class="mobile-dropdown-toggle" aria-expanded="false">
+          <span>About Us</span>
+          <svg class="mobile-dropdown-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
+        <ul class="mobile-submenu">
+          <li><a href="/about" class="mobile-submenu-link">About Us</a></li>
+          <li><a href="/infrastructure" class="mobile-submenu-link">Infrastructure</a></li>
+          <li><a href="/quality" class="mobile-submenu-link">Quality Assurance &amp; Certifications</a></li>
+          <li><a href="/sustainability" class="mobile-submenu-link">Sustainability &amp; CSR</a></li>
+        </ul>
+      </li>
+
+      <!-- Mobile What We Do Dropdown -->
+      <li class="mobile-nav-item has-mobile-dropdown">
+        <button class="mobile-dropdown-toggle" aria-expanded="false">
+          <span>What We Do</span>
+          <svg class="mobile-dropdown-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
+        <ul class="mobile-submenu">
+          <li><a href="/value-chain" class="mobile-submenu-link">Value Chain</a></li>
+        </ul>
+      </li>
+
+      <!-- Mobile Products Dropdown -->
+      <li class="mobile-nav-item has-mobile-dropdown">
+        <button class="mobile-dropdown-toggle" aria-expanded="false">
+          <span>Products</span>
+          <svg class="mobile-dropdown-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
+        <ul class="mobile-submenu">
+          <li><a href="/products" class="mobile-submenu-link">Products</a></li>
+          <li><a href="/export-b2b" class="mobile-submenu-link">Export &amp; B2B</a></li>
+        </ul>
+      </li>
+      <li><a href="/for-farmers" class="mobile-nav-link">For Farmers</a></li>
+      <li><a href="/blog" class="mobile-nav-link active">Blog</a></li>
+      <li><a href="/contact" class="mobile-nav-link">Contact</a></li>
+      <li><a href="/admin" class="mobile-nav-link" style="color:var(--color-olive-clay); font-size:0.95rem;">Review
+          Inquiries (Admin)</a></li>
+    </ul>
+    </div>
+    <div class="mobile-drawer-footer">
+      <a href="/contact" class="btn btn-accent" style="width:100%;">Get In Touch</a>
+    </div>
+  </aside>
+
+  <!-- PAGE BANNER -->
+  <div class="page-banner">
+    <div class="container page-banner-content">
+      <span class="section-tag light">Company Journal &amp; Agricultural Insights</span>
+      <h1>News &amp; Updates</h1>
+      <p>Stay updated with the latest happenings at Hiranyakeshi Agrotech — from farming season updates to company
+        milestones and industry insights.</p>
+    </div>
+  </div>
+
+  <!-- MAIN BLOG SECTION -->
+  <section class="section-padding">
+    <div class="container">
+
+      <!-- Category Filter Tabs -->
+      <div class="blog-filter-bar" role="tablist" aria-label="Blog categories">
+        <button class="filter-tab active" data-category="all" role="tab" aria-selected="true">
+          All Posts <span class="tab-count" id="countAll">4</span>
+        </button>
+        <button class="filter-tab" data-category="Company News" role="tab" aria-selected="false">
+          Company News <span class="tab-count" id="countCompany">1</span>
+        </button>
+        <button class="filter-tab" data-category="Farmer Stories" role="tab" aria-selected="false">
+          Farmer Stories <span class="tab-count" id="countFarmer">1</span>
+        </button>
+        <button class="filter-tab" data-category="Industry Insights" role="tab" aria-selected="false">
+          Industry Insights <span class="tab-count" id="countIndustry">1</span>
+        </button>
+        <button class="filter-tab" data-category="Sustainability" role="tab" aria-selected="false">
+          Sustainability <span class="tab-count" id="countSustainability">1</span>
+        </button>
+      </div>
+
+      <!-- Blog Cards Grid -->
+      <div class="blog-grid" id="blogGrid">
+        <!-- Dynamic Blog Cards Injected Here -->
+      </div>
+
+      <!-- NEWSLETTER SIGNUP SECTION -->
+      <div class="blog-newsletter-section">
+        <div class="newsletter-content-wrap">
+          <div>
+            <span class="section-tag light" style="margin-bottom:8px;">Stay In The Loop</span>
+            <h3>Subscribe to get the latest updates delivered to your inbox</h3>
+            <p>Receive seasonal harvest notifications, transparent market advisories, and community stories directly
+              from the heart of paddy country.</p>
+          </div>
+          <div>
+            <form class="newsletter-form newsletter-form-inline">
+              <input type="email" placeholder="Enter your email address" required
+                aria-label="Email address for newsletter">
+              <button type="submit" class="btn btn-accent">Subscribe</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SITE FOOTER -->
+  <!-- FOOTER -->
+  <footer class="site-footer" id="siteFooter">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Col 1: Company Info -->
+        <div class="footer-col">
+          <a href="/" class="brand-logo" style="margin-bottom:14px; display:inline-flex;">
+            <div class="logo-icon-box">🌾</div>
+            <div class="logo-text-group">
+              <span class="logo-title">Hiranyakeshi Agrotech</span>
+              <span class="logo-tagline">Pvt. Ltd.</span>
+            </div>
+          </a>
+          <p class="footer-about-text">
+            Integrated farm-to-consumer value chain for paddy and rice.
+          </p>
+          <div class="social-links-row">
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn"
+              aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"></path>
+                <rect x="2" y="9" width="4" height="12"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn"
+              aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+              </svg>
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn"
+              aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Navigation Links -->
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="/">› Home</a></li>
+            <li><a href="/about">› About Us</a></li>
+            <li><a href="/infrastructure">› Infrastructure</a></li>
+            <li><a href="/quality">› Quality &amp; Certifications</a></li>
+            <li><a href="/sustainability">› Sustainability &amp; CSR</a></li>
+            <li><a href="/value-chain">› Value Chain</a></li>
+            <li><a href="/products">› Products</a></li>
+            <li><a href="/for-farmers">› For Farmers</a></li>
+            <li><a href="/blog">› News &amp; Updates</a></li>
+            <li><a href="/contact">› Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Contact Info -->
+        <div class="footer-col">
+          <h4>Contact Info</h4>
+          <ul class="footer-links">
+            <li><span>📍 Registered Office, Agro Hub</span></li>
+            <li><a href="tel:+919876543210">📞 +91 98765 43210</a></li>
+            <li><a href="mailto:hiranyakeshi.agrotech@gmail.com">✉️ hiranyakeshi.agrotech@gmail.com</a></li>
+            <li><span>⏰ Mon – Sat: 10:00 AM – 5:00 PM</span></li>
+            <li><a href="/admin" style="color:var(--color-olive-clay); margin-top:8px;">🔒 Admin / Inquiries Tray</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Stay Connected -->
+        <div class="footer-col">
+          <h4>Stay Connected</h4>
+          <p style="font-size:0.92rem; color:rgba(241,227,194,0.8); margin-bottom:12px;">
+            Subscribe for seasonal paddy harvest updates, market trends, and agri insights.
+          </p>
+          <form class="newsletter-form">
+            <input type="email" class="newsletter-input" placeholder="Enter your email" required
+              aria-label="Newsletter email address">
+            <button type="submit" class="btn btn-accent btn-sm">Join</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom">
+        <p style="color: var(--color-sandstone);">© 2026 Hiranyakeshi Agrotech Pvt. Ltd. All Rights Reserved.</p>
+        <div style="display:flex; gap:16px; flex-wrap:wrap;">
+          <a href="/contact">Privacy Policy</a>
+          <a href="/contact">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast-container"></div>
+  <script src="/js/app.js"></script>
+  <script src="/js/footer.js"></script>
+
+  <script>
+    let allPosts = [];
+    let currentCategory = 'all';
+
+    async function fetchBlogPosts() {
+      const grid = document.getElementById('blogGrid');
+      try {
+        const res = await fetch('/api/posts');
+        const json = await res.json();
+        if (json.success && json.data) {
+          allPosts = json.data;
+          updateCategoryCounts();
+          renderPosts();
+        }
+      } catch (err) {
+        console.error('Failed to load posts:', err);
+        grid.innerHTML = `
+          <div style="grid-column:1/-1; text-align:center; padding:40px; color:var(--color-dark-bark-muted);">
+            <p>Unable to load news and updates right now. Please check back shortly.</p>
+          </div>
+        `;
+      }
+    }
+
+    function updateCategoryCounts() {
+      document.getElementById('countAll').innerText = allPosts.length;
+      document.getElementById('countCompany').innerText = allPosts.filter(p => p.category === 'Company News').length;
+      document.getElementById('countFarmer').innerText = allPosts.filter(p => p.category === 'Farmer Stories').length;
+      document.getElementById('countIndustry').innerText = allPosts.filter(p => p.category === 'Industry Insights').length;
+      document.getElementById('countSustainability').innerText = allPosts.filter(p => p.category === 'Sustainability').length;
+    }
+
+    function renderPosts() {
+      const grid = document.getElementById('blogGrid');
+      const filtered = currentCategory === 'all'
+        ? allPosts
+        : allPosts.filter(p => p.category.toLowerCase() === currentCategory.toLowerCase());
+
+      if (filtered.length === 0) {
+        grid.innerHTML = `
+          <div style="grid-column: 1/-1; text-align:center; padding: 60px 20px; background:var(--color-white); border-radius:var(--radius-lg); border:1px solid var(--color-border);">
+            <h3 style="font-family:var(--font-heading); color:var(--color-deep-pine); margin-bottom:8px;">No updates found in this category</h3>
+            <p style="color:var(--color-dark-bark-muted);">Please check another category or view all posts.</p>
+          </div>
+        `;
+        return;
+      }
+
+      grid.innerHTML = filtered.map(post => {
+        const postUrl = `/blog/${post.slug || post.id}`;
+        return `
+          <article class="blog-card" id="${post.id}">
+            <div class="blog-card-img-wrap">
+              <img src="${post.image || '/images/hero-paddy.jpg'}" alt="${escapeHtml(post.title)}" loading="lazy">
+              <span class="blog-category-badge">${escapeHtml(post.category)}</span>
+            </div>
+            <div class="blog-card-body">
+              <div class="blog-card-meta">
+                <span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                    <line x1="16" y1="2" x2="16" y2="6"></line>
+                    <line x1="8" y1="2" x2="8" y2="6"></line>
+                    <line x1="3" y1="10" x2="21" y2="10"></line>
+                  </svg>
+                  ${post.formattedDate || post.date}
+                </span>
+                <span>•</span>
+                <span>${post.readTime || '4 min read'}</span>
+              </div>
+              <h2 class="blog-card-title">
+                <a href="${postUrl}">${escapeHtml(post.title)}</a>
+              </h2>
+              <p class="blog-card-excerpt">${escapeHtml(post.excerpt)}</p>
+              <div class="blog-card-footer">
+                <span style="font-size:0.8rem; color:var(--color-dark-bark-muted);">By ${escapeHtml(post.author || 'Editorial Desk')}</span>
+                <a href="${postUrl}" class="blog-read-more" aria-label="Read more about ${escapeHtml(post.title)}">
+                  Read More
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+        `;
+      }).join('');
+    }
+
+    function setupFilterTabs() {
+      const tabs = document.querySelectorAll('.filter-tab');
+      tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          tabs.forEach(t => {
+            t.classList.remove('active');
+            t.setAttribute('aria-selected', 'false');
+          });
+          tab.classList.add('active');
+          tab.setAttribute('aria-selected', 'true');
+          currentCategory = tab.dataset.category;
+          renderPosts();
+        });
+      });
+    }
+
+    function escapeHtml(str) {
+      if (!str) return '';
+      return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#039;');
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      setupFilterTabs();
+      fetchBlogPosts();
+    });
+  </script>
+</body>
+
+</html>

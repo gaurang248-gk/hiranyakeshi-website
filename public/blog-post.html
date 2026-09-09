@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title id="pageTitle">Article | Hiranyakeshi Agrotech Pvt. Ltd.</title>
+  <meta name="description" id="pageMetaDesc"
+    content="Read the latest agricultural updates and stories from Hiranyakeshi Agrotech Pvt. Ltd.">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌾</text></svg>">
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <header class="site-header" id="navbar">
+    <div class="container nav-container">
+      <a href="/" class="brand-logo" aria-label="Hiranyakeshi Agrotech Home">
+        <div class="logo-icon-box">🌾</div>
+        <div class="logo-text-group">
+          <span class="logo-title">Hiranyakeshi</span>
+          <span class="logo-tagline">Agrotech Pvt. Ltd.</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="/" class="nav-link">Home</a></li>
+
+          <!-- About Us Dropdown -->
+          <li class="nav-item has-dropdown">
+            <button class="nav-link dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+              About Us
+              <svg class="dropdown-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a href="/about" class="dropdown-item">About Us</a></li>
+              <li><a href="/infrastructure" class="dropdown-item">Infrastructure</a></li>
+              <li><a href="/quality" class="dropdown-item">Quality Assurance &amp; Certifications</a></li>
+              <li><a href="/sustainability" class="dropdown-item">Sustainability &amp; CSR</a></li>
+            </ul>
+          </li>
+
+          <!-- What We Do Dropdown -->
+          <li class="nav-item has-dropdown">
+            <button class="nav-link dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+              What We Do
+              <svg class="dropdown-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a href="/value-chain" class="dropdown-item">Value Chain</a></li>
+            </ul>
+          </li>
+
+          <!-- Products Dropdown -->
+          <li class="nav-item has-dropdown">
+            <button class="nav-link dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+              Products
+              <svg class="dropdown-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a href="/products" class="dropdown-item">Products</a></li>
+              <li><a href="/export-b2b" class="dropdown-item">Export &amp; B2B</a></li>
+            </ul>
+          </li>
+          <li><a href="/for-farmers" class="nav-link">For Farmers</a></li>
+          <li><a href="/blog" class="nav-link active">Blog</a></li>
+          <li><a href="/contact" class="nav-link nav-cta-btn">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- Mobile Hamburger Toggle -->
+    <button class="mobile-toggle-btn" id="mobileMenuToggle" aria-label="Open Mobile Menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-backdrop" id="mobileBackdrop"></div>
+  <aside class="mobile-drawer" id="mobileDrawer">
+    <div>
+      <div class="mobile-drawer-header">
+        <div class="brand-logo">
+          <div class="logo-icon-box">🌾</div>
+          <div class="logo-text-group">
+            <span class="logo-title">Hiranyakeshi</span>
+            <span class="logo-tagline">Agrotech Pvt. Ltd.</span>
+          </div>
+        </div>
+        <button id="closeDrawerBtn"
+          style="background:none; border:none; color:var(--color-sandstone); font-size:1.8rem; cursor:pointer;"
+          aria-label="Close Menu">&times;</button>
+      </div>
+
+    </div>
+    <ul class="mobile-nav-links">
+      <li><a href="/" class="mobile-nav-link">Home</a></li>
+      <li class="mobile-nav-item has-mobile-dropdown">
+        <button class="mobile-dropdown-toggle" aria-expanded="false">
+          <span>About Us</span>
+          <svg class="mobile-dropdown-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
+        <ul class="mobile-submenu">
+          <li><a href="/about" class="mobile-submenu-link">About Us</a></li>
+          <li><a href="/infrastructure" class="mobile-submenu-link">Infrastructure</a></li>
+          <li><a href="/quality" class="mobile-submenu-link">Quality Assurance &amp; Certifications</a></li>
+          <li><a href="/sustainability" class="mobile-submenu-link">Sustainability &amp; CSR</a></li>
+        </ul>
+      </li>
+      <li class="mobile-nav-item has-mobile-dropdown">
+        <button class="mobile-dropdown-toggle" aria-expanded="false">
+          <span>What We Do</span>
+          <svg class="mobile-dropdown-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
+        <ul class="mobile-submenu">
+          <li><a href="/value-chain" class="mobile-submenu-link">Value Chain</a></li>
+        </ul>
+      </li>
+      <!-- Mobile Products Dropdown -->
+      <li class="mobile-nav-item has-mobile-dropdown">
+        <button class="mobile-dropdown-toggle" aria-expanded="false">
+          <span>Products</span>
+          <svg class="mobile-dropdown-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
+        <ul class="mobile-submenu">
+          <li><a href="/products" class="mobile-submenu-link">Products</a></li>
+          <li><a href="/export-b2b" class="mobile-submenu-link">Export &amp; B2B</a></li>
+        </ul>
+      </li>
+      <li><a href="/for-farmers" class="mobile-nav-link">For Farmers</a></li>
+      <li><a href="/blog" class="mobile-nav-link active">Blog</a></li>
+      <li><a href="/contact" class="mobile-nav-link">Contact</a></li>
+      <li><a href="/admin" class="mobile-nav-link" style="color:var(--color-olive-clay); font-size:0.95rem;">Review
+          Inquiries (Admin)</a></li>
+    </ul>
+    </div>
+    <div class="mobile-drawer-footer">
+      <a href="/contact" class="btn btn-accent" style="width:100%;">Get In Touch</a>
+    </div>
+  </aside>
+
+  <!-- ARTICLE CONTAINER -->
+  <article class="section-padding" style="padding-top: 40px;">
+    <div class="container">
+      <div class="article-container" id="articleWrapper">
+
+        <!-- Breadcrumb -->
+        <nav class="article-breadcrumb" aria-label="Breadcrumb">
+          <a href="/">Home</a>
+          <span>›</span>
+          <a href="/blog">News &amp; Updates</a>
+          <span>›</span>
+          <span id="breadcrumbCategory" style="color:var(--color-deep-pine); font-weight:600;">Category</span>
+        </nav>
+
+        <!-- Article Header -->
+        <header class="article-header">
+          <span class="section-tag" id="articleCategoryTag">Company News</span>
+          <h1 class="article-title" id="articleTitle">Loading article...</h1>
+
+          <div class="article-meta-row">
+            <span style="display:inline-flex; align-items:center; gap:6px;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+              </svg>
+              <span id="articleDate">--</span>
+            </span>
+            <span style="display:inline-flex; align-items:center; gap:6px;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+              <span id="articleReadTime">--</span>
+            </span>
+            <span style="display:inline-flex; align-items:center; gap:6px;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+              <span id="articleAuthor">--</span>
+            </span>
+          </div>
+        </header>
+
+        <!-- Featured Image -->
+        <div class="article-featured-image-box" id="articleImageBox">
+          <img id="articleFeaturedImg" src="/images/hero-paddy.jpg" alt="Article featured image">
+        </div>
+
+        <!-- Full Content Body -->
+        <div class="article-body-content" id="articleBody">
+          <!-- Populated dynamically -->
+        </div>
+
+        <!-- Article Navigation -->
+        <div class="article-nav-buttons">
+          <a href="/blog" class="btn btn-outline"
+            style="border-color:var(--color-deep-pine); color:var(--color-deep-pine);">
+            &larr; Back to All News &amp; Updates
+          </a>
+          <a href="/contact" class="btn btn-primary">
+            Partner With Us &rarr;
+          </a>
+        </div>
+
+      </div>
+
+      <!-- RELATED ARTICLES SECTION -->
+      <div style="margin-top: 80px; padding-top: 40px; border-top: 1px solid var(--color-border);">
+        <div style="text-align: center; margin-bottom: 36px;">
+          <span class="section-tag">More Stories</span>
+          <h3 style="font-family:var(--font-heading); font-size:2rem; color:var(--color-deep-pine);">Related Updates
+          </h3>
+        </div>
+        <div class="blog-grid" id="relatedPostsGrid">
+          <!-- Injected dynamically -->
+        </div>
+      </div>
+
+      <!-- NEWSLETTER SIGNUP -->
+      <div class="blog-newsletter-section">
+        <div class="newsletter-content-wrap">
+          <div>
+            <span class="section-tag light" style="margin-bottom:8px;">Stay In The Loop</span>
+            <h3>Subscribe to get the latest updates delivered to your inbox</h3>
+            <p>Receive seasonal harvest notifications, transparent market advisories, and community stories directly
+              from the heart of paddy country.</p>
+          </div>
+          <div>
+            <form class="newsletter-form newsletter-form-inline">
+              <input type="email" placeholder="Enter your email address" required
+                aria-label="Email address for newsletter">
+              <button type="submit" class="btn btn-accent">Subscribe</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </article>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" id="siteFooter">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Col 1: Company Info -->
+        <div class="footer-col">
+          <a href="/" class="brand-logo" style="margin-bottom:14px; display:inline-flex;">
+            <div class="logo-icon-box">🌾</div>
+            <div class="logo-text-group">
+              <span class="logo-title">Hiranyakeshi Agrotech</span>
+              <span class="logo-tagline">Pvt. Ltd.</span>
+            </div>
+          </a>
+          <p class="footer-about-text">
+            Integrated farm-to-consumer value chain for paddy and rice.
+          </p>
+          <div class="social-links-row">
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn"
+              aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"></path>
+                <rect x="2" y="9" width="4" height="12"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn"
+              aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+              </svg>
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn"
+              aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Navigation Links -->
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="/">› Home</a></li>
+            <li><a href="/about">› About Us</a></li>
+            <li><a href="/infrastructure">› Infrastructure</a></li>
+            <li><a href="/quality">› Quality &amp; Certifications</a></li>
+            <li><a href="/sustainability">› Sustainability &amp; CSR</a></li>
+            <li><a href="/value-chain">› Value Chain</a></li>
+            <li><a href="/products">› Products</a></li>
+            <li><a href="/for-farmers">› For Farmers</a></li>
+            <li><a href="/blog">› News &amp; Updates</a></li>
+            <li><a href="/contact">› Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Contact Info -->
+        <div class="footer-col">
+          <h4>Contact Info</h4>
+          <ul class="footer-links">
+            <li><span>📍 Registered Office, Agro Hub</span></li>
+            <li><a href="tel:+919876543210">📞 +91 98765 43210</a></li>
+            <li><a href="mailto:hiranyakeshi.agrotech@gmail.com">✉️ hiranyakeshi.agrotech@gmail.com</a></li>
+            <li><span>⏰ Mon – Sat: 10:00 AM – 5:00 PM</span></li>
+            <li><a href="/admin" style="color:var(--color-olive-clay); margin-top:8px;">🔒 Admin / Inquiries Tray</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Stay Connected -->
+        <div class="footer-col">
+          <h4>Stay Connected</h4>
+          <p style="font-size:0.92rem; color:rgba(241,227,194,0.8); margin-bottom:12px;">
+            Subscribe for seasonal paddy harvest updates, market trends, and agri insights.
+          </p>
+          <form class="newsletter-form">
+            <input type="email" class="newsletter-input" placeholder="Enter your email" required
+              aria-label="Newsletter email address">
+            <button type="submit" class="btn btn-accent btn-sm">Join</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom">
+        <p style="color: var(--color-sandstone);">© 2026 Hiranyakeshi Agrotech Pvt. Ltd. All Rights Reserved.</p>
+        <div style="display:flex; gap:16px; flex-wrap:wrap;">
+          <a href="/contact">Privacy Policy</a>
+          <a href="/contact">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast-container"></div>
+  <script src="/js/app.js"></script>
+  <script src="/js/footer.js"></script>
+
+  <script>
+    async function loadArticle() {
+      // Determine post identifier from URL path or query params
+      const urlParams = new URLSearchParams(window.location.search);
+      let identifier = urlParams.get('id') || urlParams.get('slug');
+
+      if (!identifier) {
+        // Check pathname like /blog/our-journey-towards-better-farmer-partnerships
+        const segments = window.location.pathname.split('/').filter(Boolean);
+        if (segments.length >= 2 && segments[0] === 'blog') {
+          identifier = segments[1];
+        }
+      }
+
+      // Default fallback if opened directly without param
+      if (!identifier) {
+        identifier = 'our-journey-towards-better-farmer-partnerships';
+      }
+
+      try {
+        const res = await fetch(`/api/posts/${identifier}`);
+        const data = await res.json();
+
+        if (data.success && data.data) {
+          const post = data.data;
+          document.getElementById('pageTitle').innerText = `${post.title} | Hiranyakeshi Agrotech Pvt. Ltd.`;
+          document.getElementById('pageMetaDesc').setAttribute('content', post.excerpt);
+          document.getElementById('articleTitle').innerText = post.title;
+          document.getElementById('breadcrumbCategory').innerText = post.category;
+          document.getElementById('articleCategoryTag').innerText = post.category;
+          document.getElementById('articleDate').innerText = post.formattedDate || post.date;
+          document.getElementById('articleReadTime').innerText = post.readTime || '4 min read';
+          document.getElementById('articleAuthor').innerText = post.author || 'Hiranyakeshi Editorial Desk';
+          document.getElementById('articleFeaturedImg').src = post.image || '/images/hero-paddy.jpg';
+          document.getElementById('articleFeaturedImg').alt = post.title;
+          document.getElementById('articleBody').innerHTML = post.content || `<p>${post.excerpt}</p>`;
+
+          loadRelatedPosts(post.id, post.category);
+        } else {
+          document.getElementById('articleWrapper').innerHTML = `
+            <div style="text-align:center; padding:80px 20px;">
+              <h2 style="font-family:var(--font-heading); color:var(--color-deep-pine);">Article Not Found</h2>
+              <p style="color:var(--color-dark-bark-muted); margin: 16px 0 24px;">The article you are looking for may have been moved or removed.</p>
+              <a href="/blog" class="btn btn-primary">&larr; Return to News &amp; Updates</a>
+            </div>
+          `;
+        }
+      } catch (err) {
+        console.error('Failed to load article:', err);
+      }
+    }
+
+    async function loadRelatedPosts(currentPostId, category) {
+      const relatedGrid = document.getElementById('relatedPostsGrid');
+      try {
+        const res = await fetch('/api/posts');
+        const data = await res.json();
+        if (data.success && data.data) {
+          const others = data.data.filter(p => p.id !== currentPostId).slice(0, 3);
+          if (others.length === 0) {
+            document.getElementById('relatedPostsGrid').parentElement.style.display = 'none';
+            return;
+          }
+
+          relatedGrid.innerHTML = others.map(post => `
+            <article class="blog-card">
+              <div class="blog-card-img-wrap">
+                <img src="${post.image || '/images/hero-paddy.jpg'}" alt="${escapeHtml(post.title)}" loading="lazy">
+                <span class="blog-category-badge">${escapeHtml(post.category)}</span>
+              </div>
+              <div class="blog-card-body">
+                <div class="blog-card-meta">
+                  <span>${post.formattedDate || post.date}</span>
+                  <span>•</span>
+                  <span>${post.readTime || '4 min read'}</span>
+                </div>
+                <h4 class="blog-card-title" style="font-size:1.15rem;">
+                  <a href="/blog/${post.slug || post.id}">${escapeHtml(post.title)}</a>
+                </h4>
+                <p class="blog-card-excerpt" style="font-size:0.88rem;">${escapeHtml(post.excerpt)}</p>
+                <div class="blog-card-footer">
+                  <a href="/blog/${post.slug || post.id}" class="blog-read-more" style="font-size:0.85rem;">
+                    Read More &rarr;
+                  </a>
+                </div>
+              </div>
+            </article>
+          `).join('');
+        }
+      } catch (e) {
+        console.error('Error fetching related posts:', e);
+      }
+    }
+
+    function escapeHtml(str) {
+      if (!str) return '';
+      return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#039;');
+    }
+
+    document.addEventListener('DOMContentLoaded', loadArticle);
+  </script>
+</body>
+
+</html>
