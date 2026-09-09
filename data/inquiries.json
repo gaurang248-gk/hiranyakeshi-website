@@ -1,5 +1,20 @@
 [
   {
+    "id": "INQ-MTU572GC",
+    "name": "www",
+    "email": "gaurangkuwar248@gmail.com",
+    "phone": "N/A",
+    "category": "Farmer Partnership",
+    "subject": "Inquiry for Silky Sortex White Rice",
+    "message": "w",
+    "farmSize": null,
+    "paddyVariety": null,
+    "location": null,
+    "status": "New",
+    "createdAt": "2026-09-09T13:36:50.988Z",
+    "formattedDate": "9 Sept 2026, 07:06 pm"
+  },
+  {
     "id": "INQ-MTJZ8AQD",
     "name": "Baburao Patil",
     "email": "contact_1788346328917@hiranyakeshi.in",
