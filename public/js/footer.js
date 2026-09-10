@@ -20,7 +20,7 @@ const SHARED_FOOTER_HTML = `
           <div class="logo-icon-box">🌾</div>
           <div class="logo-text-group">
             <span class="logo-title">Hiranyakeshi Agrotech</span>
-            <span class="logo-tagline">Pvt. Ltd.</span>
+            <span class="logo-tagline">Farmer First. Women Led. Naturally Better.</span>
           </div>
         </a>
         <p class="footer-about-text">
