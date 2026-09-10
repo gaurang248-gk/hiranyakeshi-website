@@ -229,9 +229,21 @@
     }
 
     @keyframes shake {
-      0%, 100% { transform: translateX(0); }
-      20%, 60% { transform: translateX(-6px); }
-      40%, 80% { transform: translateX(6px); }
+
+      0%,
+      100% {
+        transform: translateX(0);
+      }
+
+      20%,
+      60% {
+        transform: translateX(-6px);
+      }
+
+      40%,
+      80% {
+        transform: translateX(6px);
+      }
     }
 
     .shake {
@@ -248,7 +260,8 @@
         <div class="logo-icon-box">🌾</div>
         <div class="logo-text-group">
           <span class="logo-title" style="color: #FFFFFF;">Hiranyakeshi Agrotech</span>
-          <span class="logo-tagline" style="color: var(--color-sandstone);">Administration Gate</span>
+          <span class="logo-tagline" style="color: var(--color-sandstone);">Farmer First. Women Led. Naturally
+            Better.</span>
         </div>
       </a>
       <a href="/" class="btn btn-outline-light btn-sm">&larr; Back to Website</a>
@@ -284,16 +297,8 @@
             <label for="password" class="form-label">Admin Security Password</label>
             <div class="input-wrapper">
               <span class="input-icon">🔑</span>
-              <input 
-                type="password" 
-                id="password" 
-                name="password" 
-                class="form-control" 
-                placeholder="Enter password" 
-                required 
-                autocomplete="current-password"
-                autofocus
-              >
+              <input type="password" id="password" name="password" class="form-control" placeholder="Enter password"
+                required autocomplete="current-password" autofocus>
               <button type="button" class="toggle-password" id="togglePassword" aria-label="Show password">
                 👁️
               </button>
@@ -346,7 +351,7 @@
     // Handle AJAX submission
     loginForm.addEventListener('submit', async (e) => {
       e.preventDefault();
-      
+
       const password = passwordInput.value.trim();
       if (!password) {
         errorAlert.style.display = 'flex';
@@ -385,7 +390,7 @@
           passwordInput.classList.add('input-error');
           passwordInput.value = '';
           passwordInput.focus();
-          
+
           loginCard.classList.remove('shake');
           void loginCard.offsetWidth; // trigger reflow
           loginCard.classList.add('shake');
