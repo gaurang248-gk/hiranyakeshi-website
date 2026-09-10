@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Login | Hiranyakeshi Agrotech Pvt. Ltd.</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌾</text></svg>">
+  <style>
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background-color: var(--color-sandstone-light);
+      background-image: radial-gradient(#d3c7a3 1px, transparent 1px);
+      background-size: 24px 24px;
+      font-family: var(--font-body);
+      color: var(--color-dark-bark);
+    }
+
+    .login-nav {
+      background-color: var(--color-deep-pine);
+      padding: 16px 0;
+      border-bottom: 2px solid var(--color-olive-clay);
+    }
+
+    .login-container {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+
+    .login-card {
+      background: var(--color-white);
+      width: 100%;
+      max-width: 440px;
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(178, 166, 103, 0.4);
+      box-shadow: 0 20px 50px rgba(32, 56, 60, 0.12);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+
+    .login-card-header {
+      background: linear-gradient(135deg, var(--color-deep-pine), #2c4d52);
+      padding: 32px 30px;
+      text-align: center;
+      color: var(--color-sandstone);
+      position: relative;
+    }
+
+    .login-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 12px;
+      border-radius: var(--radius-full);
+      background: rgba(178, 166, 103, 0.25);
+      border: 1px solid var(--color-olive-clay);
+      color: var(--color-sandstone);
+      font-size: 0.78rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 12px;
+    }
+
+    .login-card-header h1 {
+      font-family: var(--font-heading);
+      font-size: 1.6rem;
+      color: #FFFFFF;
+      margin-bottom: 8px;
+    }
+
+    .login-card-header p {
+      font-size: 0.88rem;
+      color: var(--color-sandstone);
+      opacity: 0.9;
+      margin: 0;
+    }
+
+    .login-card-body {
+      padding: 36px 32px;
+    }
+
+    .alert-box {
+      display: none;
+      padding: 12px 16px;
+      border-radius: var(--radius-md);
+      font-size: 0.9rem;
+      margin-bottom: 24px;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .alert-box.alert-error {
+      background-color: #fee2e2;
+      border: 1px solid #f87171;
+      color: #991b1b;
+      display: flex;
+    }
+
+    .alert-box.alert-success {
+      background-color: #ecfdf5;
+      border: 1px solid #34d399;
+      color: #065f46;
+      display: flex;
+    }
+
+    .form-group {
+      margin-bottom: 24px;
+    }
+
+    .form-label {
+      display: block;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--color-deep-pine);
+      margin-bottom: 8px;
+    }
+
+    .input-wrapper {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+
+    .input-icon {
+      position: absolute;
+      left: 14px;
+      color: var(--color-dark-bark-muted);
+      font-size: 1.1rem;
+      pointer-events: none;
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 13px 44px 13px 42px;
+      border: 1.5px solid rgba(32, 56, 60, 0.2);
+      border-radius: var(--radius-md);
+      font-family: inherit;
+      font-size: 1rem;
+      color: var(--color-dark-bark);
+      background-color: #FAFBF9;
+      transition: all var(--transition-fast);
+    }
+
+    .form-control:focus {
+      outline: none;
+      border-color: var(--color-deep-pine);
+      background-color: #FFFFFF;
+      box-shadow: 0 0 0 4px rgba(32, 56, 60, 0.12);
+    }
+
+    .form-control.input-error {
+      border-color: #ef4444;
+      background-color: #fffaf0;
+    }
+
+    .toggle-password {
+      position: absolute;
+      right: 12px;
+      background: none;
+      border: none;
+      color: var(--color-dark-bark-muted);
+      cursor: pointer;
+      padding: 6px;
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 4px;
+    }
+
+    .toggle-password:hover {
+      color: var(--color-deep-pine);
+    }
+
+    .btn-submit {
+      width: 100%;
+      padding: 14px;
+      background-color: var(--color-deep-pine);
+      color: var(--color-sandstone);
+      border: none;
+      border-radius: var(--radius-md);
+      font-family: inherit;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: all var(--transition-fast);
+    }
+
+    .btn-submit:hover {
+      background-color: var(--color-deep-pine-light);
+      transform: translateY(-1px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .btn-submit:active {
+      transform: translateY(0);
+    }
+
+    .btn-submit:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+
+    .card-footer-info {
+      margin-top: 24px;
+      text-align: center;
+      font-size: 0.82rem;
+      color: var(--color-dark-bark-muted);
+    }
+
+    .login-footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.82rem;
+      color: var(--color-dark-bark-muted);
+    }
+
+    @keyframes shake {
+      0%, 100% { transform: translateX(0); }
+      20%, 60% { transform: translateX(-6px); }
+      40%, 80% { transform: translateX(6px); }
+    }
+
+    .shake {
+      animation: shake 0.4s ease-in-out;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header class="login-nav">
+    <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+      <a href="/" class="brand-logo" style="text-decoration: none;">
+        <div class="logo-icon-box">🌾</div>
+        <div class="logo-text-group">
+          <span class="logo-title" style="color: #FFFFFF;">Hiranyakeshi Agrotech</span>
+          <span class="logo-tagline" style="color: var(--color-sandstone);">Administration Gate</span>
+        </div>
+      </a>
+      <a href="/" class="btn btn-outline-light btn-sm">&larr; Back to Website</a>
+    </div>
+  </header>
+
+  <!-- MAIN LOGIN SECTION -->
+  <main class="login-container">
+    <div class="login-card" id="loginCard">
+      <div class="login-card-header">
+        <div class="login-badge">
+          <span>🔒 Authorized Personnel Only</span>
+        </div>
+        <h1>Portal Sign In</h1>
+        <p>Inquiries Tray &amp; Submission Dashboard</p>
+      </div>
+
+      <div class="login-card-body">
+        <!-- Error Alert -->
+        <div class="alert-box alert-error" id="errorAlert" role="alert">
+          <span style="font-size: 1.1rem;">⚠️</span>
+          <span id="errorMessage">Incorrect password</span>
+        </div>
+
+        <!-- Success Alert (e.g., Logout message) -->
+        <div class="alert-box alert-success" id="successAlert" role="status">
+          <span style="font-size: 1.1rem;">✅</span>
+          <span id="successMessage">You have been logged out successfully.</span>
+        </div>
+
+        <form id="adminLoginForm" method="POST" action="/admin-login" novalidate>
+          <div class="form-group">
+            <label for="password" class="form-label">Admin Security Password</label>
+            <div class="input-wrapper">
+              <span class="input-icon">🔑</span>
+              <input 
+                type="password" 
+                id="password" 
+                name="password" 
+                class="form-control" 
+                placeholder="Enter password" 
+                required 
+                autocomplete="current-password"
+                autofocus
+              >
+              <button type="button" class="toggle-password" id="togglePassword" aria-label="Show password">
+                👁️
+              </button>
+            </div>
+          </div>
+
+          <button type="submit" class="btn-submit" id="submitBtn">
+            <span>Unlock Dashboard</span>
+            <span>&rarr;</span>
+          </button>
+        </form>
+
+        <div class="card-footer-info">
+          <span>Protected by Hiranyakeshi Session Management &bull; 24h Session Duration</span>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="login-footer">
+    <p>&copy; 2026 Hiranyakeshi Agrotech Pvt. Ltd. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // URL param handling for fallback or logout notices
+    const urlParams = new URLSearchParams(window.location.search);
+    const errorAlert = document.getElementById('errorAlert');
+    const successAlert = document.getElementById('successAlert');
+    const passwordInput = document.getElementById('password');
+    const toggleBtn = document.getElementById('togglePassword');
+    const loginForm = document.getElementById('adminLoginForm');
+    const submitBtn = document.getElementById('submitBtn');
+    const loginCard = document.getElementById('loginCard');
+
+    if (urlParams.get('error') === 'invalid') {
+      errorAlert.style.display = 'flex';
+      document.getElementById('errorMessage').innerText = 'Incorrect password';
+      passwordInput.classList.add('input-error');
+    } else if (urlParams.get('logout') === '1') {
+      successAlert.style.display = 'flex';
+    }
+
+    // Toggle password visibility
+    toggleBtn.addEventListener('click', () => {
+      const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+      passwordInput.setAttribute('type', type);
+      toggleBtn.innerText = type === 'password' ? '👁️' : '🙈';
+    });
+
+    // Handle AJAX submission
+    loginForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      const password = passwordInput.value.trim();
+      if (!password) {
+        errorAlert.style.display = 'flex';
+        document.getElementById('errorMessage').innerText = 'Please enter the admin password';
+        passwordInput.classList.add('input-error');
+        passwordInput.focus();
+        return;
+      }
+
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<span>Verifying...</span>';
+      errorAlert.style.display = 'none';
+      successAlert.style.display = 'none';
+      passwordInput.classList.remove('input-error');
+
+      try {
+        const response = await fetch('/admin-login', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify({ password })
+        });
+
+        const data = await response.json();
+
+        if (response.ok && data.success) {
+          submitBtn.innerHTML = '<span>Access Granted! Redirecting...</span>';
+          window.location.href = data.redirectUrl || '/admin';
+        } else {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = '<span>Unlock Dashboard</span><span>&rarr;</span>';
+          errorAlert.style.display = 'flex';
+          document.getElementById('errorMessage').innerText = data.error || 'Incorrect password';
+          passwordInput.classList.add('input-error');
+          passwordInput.value = '';
+          passwordInput.focus();
+          
+          loginCard.classList.remove('shake');
+          void loginCard.offsetWidth; // trigger reflow
+          loginCard.classList.add('shake');
+        }
+      } catch (err) {
+        // Fallback to standard form submission if fetch/network fails
+        loginForm.submit();
+      }
+    });
+  </script>
+</body>
+
+</html>
