@@ -290,10 +290,10 @@ app.post('/api/contact', (req, res) => {
   try {
     const { name, email, phone, category, subject, message, farmSize, paddyVariety, location } = req.body;
 
-    if (!name || !message || (!email && !phone)) {
+    if (!name || !email || !phone || !message) {
       return res.status(400).json({
         success: false,
-        error: 'Please provide full name, contact details (phone or email), and message.'
+        error: 'Please provide full name, email, phone number, and message.'
       });
     }
 
@@ -326,7 +326,7 @@ app.post('/api/contact', (req, res) => {
     // Notification simulation / logging
     console.log(`\n========================================`);
     console.log(`[EMAIL NOTIFICATION DISPATCHED]`);
-    console.log(`To: hiranyakeshi.agrotech@gmail.com`);
+    console.log(`To: info@hiranyakeshiagrotech.com`);
     console.log(`Subject: New ${newInquiry.category} - ${newInquiry.name} (${newInquiry.id})`);
     console.log(`From: ${newInquiry.name} <${newInquiry.email}> | Phone: ${newInquiry.phone}`);
     console.log(`Message:\n${newInquiry.message}`);
@@ -384,7 +384,7 @@ app.post('/api/b2b-inquiry', (req, res) => {
     // Simulated email notification
     console.log(`\n========================================`);
     console.log(`[B2B BULK INQUIRY EMAIL NOTIFICATION]`);
-    console.log(`To: hiranyakeshi.agrotech@gmail.com`);
+    console.log(`To: info@hiranyakeshiagrotech.com`);
     console.log(`Subject: New B2B Bulk Order Inquiry from ${b2bInquiry.companyName} (${b2bInquiry.id})`);
     console.log(`Company: ${b2bInquiry.companyName} | Country: ${b2bInquiry.country}`);
     console.log(`Contact: ${b2bInquiry.contactPerson} <${b2bInquiry.email}> | Phone: ${b2bInquiry.phone}`);

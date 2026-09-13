@@ -204,13 +204,15 @@
         <div class="logo-icon-box">🌾</div>
         <div class="logo-text-group">
           <span class="logo-title">Hiranyakeshi Agrotech</span>
-          <span class="logo-tagline">Management Hub &amp; CMS</span>
+          <span class="logo-tagline">Farmer First. Women Led. Naturally Better.</span>
         </div>
       </a>
       <div style="display:flex; gap:12px; align-items:center; flex-wrap:wrap;">
         <a href="/blog" class="btn btn-outline-light btn-sm" target="_blank">View Live Blog &rarr;</a>
         <a href="/" class="btn btn-outline-light btn-sm">&larr; Back to Website</a>
-        <a href="/admin-logout" class="btn btn-sm" style="background:#dc2626; color:#ffffff; border:1px solid #b91c1c; font-weight:600; padding:6px 14px; border-radius:var(--radius-sm); text-decoration:none; display:inline-flex; align-items:center; gap:6px;">🔒 Log Out</a>
+        <a href="/admin-logout" class="btn btn-sm"
+          style="background:#dc2626; color:#ffffff; border:1px solid #b91c1c; font-weight:600; padding:6px 14px; border-radius:var(--radius-sm); text-decoration:none; display:inline-flex; align-items:center; gap:6px;">🔒
+          Log Out</a>
       </div>
     </div>
   </header>
@@ -473,7 +475,7 @@
   <script>
     // Global 401 interceptor for session expiry
     const originalFetch = window.fetch;
-    window.fetch = async function(...args) {
+    window.fetch = async function (...args) {
       const response = await originalFetch(...args);
       if (response.status === 401) {
         window.location.href = '/admin-login';

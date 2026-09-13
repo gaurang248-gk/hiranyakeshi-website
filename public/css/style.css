@@ -365,6 +365,9 @@ p {
 .logo-icon-box {
   width: 44px;
   height: 44px;
+  min-width: 44px;
+  min-height: 44px;
+  flex-shrink: 0;
   background: linear-gradient(135deg, var(--color-olive-clay), var(--color-sandstone));
   border-radius: var(--radius-sm);
   display: flex;
@@ -374,6 +377,14 @@ p {
   font-weight: 800;
   font-size: 1.3rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.site-footer .logo-icon-box {
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  min-height: 44px;
+  flex-shrink: 0;
 }
 
 .logo-text-group {
@@ -1531,7 +1542,7 @@ textarea.form-control {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 1.6fr 1fr 1fr 1.4fr;
+  grid-template-columns: 1.3fr 0.8fr 0.8fr 1.1fr 1.1fr;
   gap: 40px;
   padding-bottom: 60px;
   border-bottom: 1px solid rgba(178, 166, 103, 0.2);
@@ -1831,6 +1842,14 @@ textarea.form-control {
    - Laptop/Desktop: 769px and above
    ========================================================================== */
 
+/* Medium Screens / Small Laptops (<= 992px) */
+@media (max-width: 992px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 32px;
+  }
+}
+
 /* Tablet Breakpoint (<= 768px) */
 @media (max-width: 768px) {
   :root {
@@ -1869,7 +1888,7 @@ textarea.form-control {
   }
 
   .footer-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr !important;
     gap: 32px;
   }
 
@@ -1953,7 +1972,7 @@ textarea.form-control {
   }
 
   .footer-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
   }
 
   .footer-bottom {
