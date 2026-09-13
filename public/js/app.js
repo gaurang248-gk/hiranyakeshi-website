@@ -275,7 +275,7 @@ const SHARED_FOOTER_HTML = `
       <!-- Col 1: Company Info -->
       <div class="footer-col">
         <a href="/" class="brand-logo" style="margin-bottom:14px; display:inline-flex;">
-          <div class="logo-icon-box" style="width:44px; height:44px; min-width:44px; min-height:44px; flex-shrink:0;">🌾</div>
+          <img src="/images/logo.png" alt="Hiranyakeshi Agrotech Logo" class="brand-logo-img" width="44" height="44">
           <div class="logo-text-group">
             <span class="logo-title">Hiranyakeshi Agrotech</span>
             <span class="logo-tagline">Farmer First. Women Led. Naturally Better.</span>

@@ -442,12 +442,34 @@ p {
   height: 100%;
 }
 
-/* Brand Logo (Serif / Bold Placeholder) */
+/* Brand Logo */
 .brand-logo {
   display: flex;
   align-items: center;
   gap: 12px;
   text-decoration: none;
+}
+
+.brand-logo-img,
+.logo-icon-box img {
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  min-height: 44px;
+  max-width: 44px;
+  max-height: 44px;
+  flex-shrink: 0;
+  object-fit: contain;
+  display: block;
+  border-radius: var(--radius-sm);
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.22));
+  transition: transform var(--transition-fast), filter var(--transition-fast);
+}
+
+.brand-logo:hover .brand-logo-img,
+.brand-logo:hover .logo-icon-box img {
+  transform: scale(1.05);
+  filter: drop-shadow(0 4px 12px rgba(178, 166, 103, 0.35));
 }
 
 .logo-icon-box {
@@ -456,17 +478,15 @@ p {
   min-width: 44px;
   min-height: 44px;
   flex-shrink: 0;
-  background: linear-gradient(135deg, var(--color-olive-clay), var(--color-sandstone));
+  background: transparent;
   border-radius: var(--radius-sm);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--color-deep-pine);
-  font-weight: 800;
-  font-size: 1.3rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
 }
 
+.site-footer .brand-logo-img,
 .site-footer .logo-icon-box {
   width: 44px;
   height: 44px;
@@ -2301,6 +2321,16 @@ textarea.form-control {
 
   .logo-tagline {
     font-size: 0.65rem;
+  }
+
+  .brand-logo-img,
+  .logo-icon-box {
+    width: 38px;
+    height: 38px;
+    min-width: 38px;
+    min-height: 38px;
+    max-width: 38px;
+    max-height: 38px;
   }
 
   .stats-grid {
