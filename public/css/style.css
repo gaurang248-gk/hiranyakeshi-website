@@ -1339,14 +1339,16 @@ p {
    LEADERSHIP / TEAM SECTION (ABOUT US)
    ========================================================================== */
 .leadership-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 40px;
   max-width: 900px;
   margin: 0 auto;
 }
 
 .leader-card {
+  flex: 0 1 380px;
   background: var(--color-white);
   border-radius: var(--radius-lg);
   padding: 36px 30px;
@@ -1357,6 +1359,37 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.leader-card-featured {
+  flex-basis: 100%;
+  background: linear-gradient(135deg, var(--color-white), var(--color-sandstone));
+  border: 2px solid var(--color-olive-clay);
+  position: relative;
+  padding: 44px 30px;
+}
+
+.leader-card-featured::before {
+  content: "FOUNDING LEADER";
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--color-deep-pine);
+  color: var(--color-sandstone);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  padding: 6px 20px;
+  border-radius: 20px;
+  box-shadow: var(--shadow-md);
+}
+
+.leader-card-featured .leader-avatar {
+  width: 150px;
+  height: 150px;
+  font-size: 2.6rem;
+  border: 5px solid var(--color-olive-clay);
 }
 
 .leader-card:hover {
@@ -2491,4 +2524,97 @@ textarea.form-control {
   font-size: 2.8rem;
   font-weight: 700;
   color: #20383C;
+}
+
+.leader-card-featured {
+  flex-basis: 90%;
+}
+
+/* Support Page Styles */
+.support-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 32px;
+  margin-top: 48px;
+}
+
+.support-card {
+  flex: 0 1 260px;
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  padding: 34px 26px;
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-md);
+  text-align: center;
+  transition: all var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.support-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-xl);
+  border-color: var(--color-olive-clay);
+}
+
+.support-icon {
+  font-size: 2.4rem;
+  margin-bottom: 16px;
+}
+
+.support-title {
+  font-size: 1.25rem;
+  color: var(--color-deep-pine);
+  margin-bottom: 10px;
+}
+
+.support-desc {
+  font-size: 0.92rem;
+  color: var(--color-dark-bark-muted);
+  line-height: 1.6;
+  margin-bottom: 16px;
+  flex-grow: 1;
+}
+
+.support-link {
+  display: inline-block;
+  font-weight: 700;
+  color: var(--color-olive-clay-dark);
+  text-decoration: none;
+  border-bottom: 2px solid var(--color-olive-clay);
+  padding-bottom: 2px;
+  transition: color var(--transition-normal);
+  word-break: break-all;
+}
+
+.support-link:hover {
+  color: var(--color-deep-pine);
+}
+
+.faq-list {
+  max-width: 800px;
+  margin: 48px auto 0;
+}
+
+.faq-item {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  padding: 24px 28px;
+  margin-bottom: 18px;
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+}
+
+.faq-question {
+  font-size: 1.1rem;
+  color: var(--color-deep-pine);
+  margin-bottom: 8px;
+}
+
+.faq-answer {
+  font-size: 0.95rem;
+  color: var(--color-dark-bark-muted);
+  line-height: 1.6;
 }

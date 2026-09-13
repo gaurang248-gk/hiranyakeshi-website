@@ -44,7 +44,7 @@ const TRANSLATIONS = {
       footer_newsletter_btn: "Join",
       footer_copyright: "© 2026 Hiranyakeshi Agrotech Pvt. Ltd. All rights reserved.",
       footer_privacy: "Privacy Policy",
-      footer_terms: "Terms of Service",
+      footer_terms: "Support",
 
       // Common CTAs & Buttons
       btn_explore_products: "Explore Products",
@@ -108,7 +108,7 @@ const TRANSLATIONS = {
       footer_newsletter_btn: "सामील व्हा",
       footer_copyright: "© २०२६ हिरण्यकेशी अ‍ॅग्रोटेक प्रा. लि. सर्व हक्क राखीव.",
       footer_privacy: "गोपनीयता धोरण",
-      footer_terms: "सेवा अटी",
+      footer_terms: "सपोर्ट",
 
       // Common CTAs & Buttons
       btn_explore_products: "उत्पादने पहा",
