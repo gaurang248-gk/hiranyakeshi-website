@@ -65,6 +65,9 @@
 html {
   scroll-behavior: smooth;
   font-size: 16px;
+  overflow-x: hidden;
+  max-width: 100vw;
+  width: 100%;
 }
 
 body {
@@ -75,8 +78,40 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+  max-width: 100vw;
+  width: 100%;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
   /* Body opacity gated: only hidden when JS animations are active */
   transition: opacity 0.26s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img,
+svg,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+.section-tag,
+.stat-number,
+.stat-label {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 /* JS sets html.js-animations synchronously — without it, body is always visible */
@@ -2027,17 +2062,100 @@ textarea.form-control {
 }
 
 /* ==========================================================================
+   PAGE-SPECIFIC GRID CLASSES (REPLACING INLINE MULTI-COLUMN GRIDS)
+   ========================================================================== */
+
+/* Vision & Mission Grid (About Us) */
+.vision-mission-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  align-items: stretch;
+}
+
+.vision-mission-card {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 44px;
+  border-radius: var(--radius-lg);
+  border: 2px solid var(--color-olive-clay);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Infrastructure Pillars Grid */
+.infra-pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  max-width: 1040px;
+  margin: 0 auto;
+}
+
+/* Sustainability Pillars Grid */
+.sustainability-pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+/* B2B / Export Grids */
+.b2b-stats-bar {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr));
+  gap: 24px;
+  text-align: center;
+}
+
+.b2b-features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+  gap: 28px;
+}
+
+.export-offerings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+  gap: 32px;
+}
+
+.b2b-partners-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
+  gap: 24px;
+}
+
+/* 3-Column Feature Grid */
+.feature-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+/* ==========================================================================
    RESPONSIVE MEDIA QUERIES (MOBILE FIRST COMPLIANT)
-   - Mobile: Up to 480px
-   - Tablet: 481px - 768px
-   - Laptop/Desktop: 769px and above
+   - Mobile: Up to 480px / 580px
+   - Tablet: 481px - 768px / 992px
+   - Laptop/Desktop: 993px and above
    ========================================================================== */
 
 /* Medium Screens / Small Laptops (<= 992px) */
 @media (max-width: 992px) {
   .footer-grid {
-    grid-template-columns: 1fr 1fr !important;
+    grid-template-columns: repeat(2, 1fr) !important;
     gap: 32px;
+  }
+
+  .sustainability-pillars-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .parallax-bg {
+    background-attachment: scroll !important;
+    background-position: center center !important;
   }
 }
 
@@ -2048,7 +2166,20 @@ textarea.form-control {
   }
 
   .section-padding {
-    padding: 64px 0;
+    padding: 56px 0;
+  }
+
+  .page-banner {
+    padding-top: calc(var(--header-height) + 36px);
+    padding-bottom: 44px;
+  }
+
+  .page-banner h1 {
+    font-size: clamp(1.8rem, 6vw, 2.5rem);
+  }
+
+  .page-banner p {
+    font-size: 1.05rem;
   }
 
   .nav-menu {
@@ -2066,21 +2197,20 @@ textarea.form-control {
     gap: 36px;
   }
 
-  .feature-grid-4 {
+  .feature-grid-4,
+  .feature-grid-3 {
     grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
   }
 
   .products-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
   }
 
   .gallery-grid {
     grid-template-columns: repeat(2, 1fr);
-  }
-
-  .footer-grid {
-    grid-template-columns: 1fr 1fr !important;
-    gap: 32px;
+    gap: 16px;
   }
 
   .leadership-grid {
@@ -2105,6 +2235,54 @@ textarea.form-control {
   .hero-cta-group .btn {
     width: 100%;
   }
+
+  /* Specific non-home section grids */
+  .cert-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .vision-mission-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .vision-mission-card {
+    padding: 28px 20px;
+  }
+
+  .infra-pillars-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .sustainability-pillars-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .export-offerings-grid,
+  .b2b-features-grid,
+  .b2b-partners-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+/* Small Tablet / Phablet Breakpoint (<= 580px) */
+@media (max-width: 580px) {
+  .footer-grid {
+    grid-template-columns: 1fr !important;
+    gap: 28px;
+  }
+
+  .feature-grid-4,
+  .feature-grid-3,
+  .products-grid,
+  .gallery-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px;
+  }
 }
 
 /* Mobile Breakpoint (<= 480px) */
@@ -2114,7 +2292,7 @@ textarea.form-control {
   }
 
   .section-padding {
-    padding: 48px 0;
+    padding: 44px 0;
   }
 
   .logo-title {
@@ -2123,12 +2301,6 @@ textarea.form-control {
 
   .logo-tagline {
     font-size: 0.65rem;
-  }
-
-  .feature-grid-4,
-  .products-grid,
-  .gallery-grid {
-    grid-template-columns: 1fr;
   }
 
   .stats-grid {
@@ -2159,11 +2331,7 @@ textarea.form-control {
   }
 
   .form-card {
-    padding: 24px 18px;
-  }
-
-  .footer-grid {
-    grid-template-columns: 1fr !important;
+    padding: 24px 16px;
   }
 
   .footer-bottom {
@@ -2185,6 +2353,19 @@ textarea.form-control {
     width: 26px;
     height: 26px;
     font-size: 0.75rem;
+  }
+
+  .b2b-stats-bar {
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+
+  .feature-box {
+    padding: 24px 18px !important;
+  }
+
+  .cert-card {
+    padding: 24px 18px;
   }
 }
 

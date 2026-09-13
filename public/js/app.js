@@ -271,7 +271,7 @@ document.head.appendChild(styleTag);
 /* Shared Footer Component */
 const SHARED_FOOTER_HTML = `
   <div class="container">
-    <div class="footer-grid" style="grid-template-columns: 1.3fr 0.8fr 0.8fr 1.1fr 1.1fr;">
+    <div class="footer-grid">
       <!-- Col 1: Company Info -->
       <div class="footer-col">
         <a href="/" class="brand-logo" style="margin-bottom:14px; display:inline-flex;">

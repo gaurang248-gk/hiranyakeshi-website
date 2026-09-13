@@ -182,7 +182,7 @@
       <h1 style="text-align: center; color: var(--color-sandstone);">
         <span
           style="display: block; font-size: 1.5rem; font-weight: 300; color: var(--color-sandstone-dark); font-family: var(--font-heading); margin-bottom: 8px;">About</span>
-        <span style="display: block; font-size: 3.2rem; font-weight: 700; font-style: normal;">Hiranyakeshi
+        <span style="display: block; font-size: clamp(1.8rem, 6vw, 3.2rem); font-weight: 700; font-style: normal;">Hiranyakeshi
           Agrotech</span>
       </h1>
       <p>Building an integrated agro-value chain that empowers farmers and delivers unmatched grain quality to
@@ -239,7 +239,7 @@
         <p>End-to-end synergy across cultivation, processing, packaging, and pan-India distribution.</p>
       </div>
 
-      <div class="feature-grid-4 stagger-container" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+      <div class="feature-grid-3 stagger-container">
         <!-- 1. Own Farms -->
         <div class="feature-box">
           <div class="feature-icon-circle">
@@ -324,10 +324,9 @@
   <!-- 4. VISION & 5. MISSION SECTION -->
   <section class="section-padding bg-deep-pine" id="vision-mission">
     <div class="container">
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: stretch;">
+      <div class="vision-mission-grid">
         <!-- Vision -->
-        <div
-          style="background-color: rgba(255,255,255,0.05); padding: 44px; border-radius: var(--radius-lg); border: 2px solid var(--color-olive-clay); display:flex; flex-direction:column; justify-content:space-between;">
+        <div class="vision-mission-card">
           <span class="section-tag light">Our North Star</span>
           <h3 style="font-size: 2rem; color: var(--color-sandstone); margin-bottom: 20px;">Our Vision</h3>
           <blockquote
@@ -372,8 +371,7 @@
         </div>
 
         <!-- Mission -->
-        <div
-          style="background-color: rgba(255,255,255,0.05); padding: 44px; border-radius: var(--radius-lg); border: 1px solid rgba(178,166,103,0.3);">
+        <div class="vision-mission-card">
           <span class="section-tag light">Strategic Commitments</span>
           <h3 style="font-size: 2rem; color: var(--color-sandstone); margin-bottom: 20px;">Our Mission</h3>
           <ul style="list-style: none; display: flex; flex-direction: column; gap: 16px;">
@@ -530,7 +528,7 @@
   <!-- FOOTER -->
   <footer class="site-footer" id="siteFooter">
     <div class="container">
-      <div class="footer-grid" style="grid-template-columns: 1.3fr 0.8fr 0.8fr 1.1fr 1.1fr;">
+      <div class="footer-grid">
         <!-- Col 1: Company Info -->
         <div class="footer-col">
           <a href="/" class="brand-logo" style="margin-bottom:14px; display:inline-flex;">
