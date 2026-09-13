@@ -37,6 +37,8 @@
   --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   --transition-normal: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
   --transition-smooth: 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
   --shadow-sm: 0 2px 8px rgba(32, 56, 60, 0.06);
   --shadow-md: 0 8px 24px rgba(32, 56, 60, 0.09);
   --shadow-lg: 0 16px 40px rgba(32, 56, 60, 0.14);
@@ -73,6 +75,26 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+  /* Body opacity gated: only hidden when JS animations are active */
+  transition: opacity 0.26s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* JS sets html.js-animations synchronously — without it, body is always visible */
+html.js-animations body {
+  opacity: 0;
+}
+
+html.js-animations body.page-ready {
+  opacity: 1;
+}
+
+html.js-animations body.page-fading-out {
+  opacity: 0;
+}
+
+body.no-motion {
+  opacity: 1 !important;
+  transition: none !important;
 }
 
 img {
@@ -245,6 +267,8 @@ p {
 
 /* Buttons */
 .btn {
+  position: relative;
+  overflow: hidden;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -255,9 +279,36 @@ p {
   border-radius: var(--radius-md);
   border: 2px solid transparent;
   cursor: pointer;
-  transition: all var(--transition-fast);
+  transition: transform 0.28s var(--ease-spring),
+              box-shadow 0.28s var(--ease-out-expo),
+              background-color 0.25s ease,
+              border-color 0.25s ease,
+              color 0.25s ease;
   text-align: center;
   line-height: 1.2;
+  z-index: 1;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.55s var(--ease-out-expo);
+  z-index: -1;
+  pointer-events: none;
+}
+
+.btn:hover::before {
+  left: 100%;
+}
+
+.btn:active {
+  transform: scale(0.96) translateY(0) !important;
+  transition-duration: 0.08s !important;
 }
 
 .btn-primary {
@@ -270,8 +321,8 @@ p {
   background-color: var(--color-olive-clay);
   border-color: var(--color-olive-clay);
   color: var(--color-dark-bark);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(32, 56, 60, 0.2);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 10px 24px rgba(32, 56, 60, 0.25);
 }
 
 .btn-accent {
@@ -285,8 +336,8 @@ p {
   background-color: var(--color-deep-pine);
   color: var(--color-sandstone-light);
   border-color: var(--color-deep-pine);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(178, 166, 103, 0.25);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 10px 24px rgba(178, 166, 103, 0.3);
 }
 
 .btn-outline-light {
@@ -298,7 +349,8 @@ p {
 .btn-outline-light:hover {
   background-color: var(--color-sandstone);
   color: var(--color-deep-pine);
-  transform: translateY(-2px);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 10px 24px rgba(241, 227, 194, 0.2);
 }
 
 .btn-outline,
@@ -312,7 +364,8 @@ p {
 .btn-outline-dark:hover {
   background-color: var(--color-deep-pine);
   color: var(--color-sandstone-light);
-  transform: translateY(-2px);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 10px 24px rgba(32, 56, 60, 0.2);
 }
 
 .btn-sm {
@@ -481,7 +534,8 @@ p {
   position: absolute;
   top: calc(100% + 14px);
   left: 50%;
-  transform: translateX(-50%) translateY(8px);
+  transform: translateX(-50%) translateY(12px) scale(0.96);
+  transform-origin: top center;
   min-width: 250px;
   background-color: rgba(32, 56, 60, 0.98);
   backdrop-filter: blur(16px);
@@ -493,7 +547,9 @@ p {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  transition: opacity 0.22s cubic-bezier(0.16, 1, 0.3, 1), transform 0.22s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.22s;
+  transition: opacity 0.25s var(--ease-out-expo),
+              transform 0.25s var(--ease-spring),
+              visibility 0.25s;
   z-index: 1100;
 }
 
@@ -512,7 +568,36 @@ p {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
-  transform: translateX(-50%) translateY(0);
+  transform: translateX(-50%) translateY(0) scale(1);
+}
+
+.dropdown-menu li {
+  opacity: 0;
+  transform: translateX(-6px);
+  transition: opacity 0.22s var(--ease-out-expo), transform 0.22s var(--ease-out-expo);
+}
+
+.has-dropdown:hover .dropdown-menu li,
+.has-dropdown:focus-within .dropdown-menu li {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.has-dropdown:hover .dropdown-menu li:nth-child(1),
+.has-dropdown:focus-within .dropdown-menu li:nth-child(1) {
+  transition-delay: 0.04s;
+}
+.has-dropdown:hover .dropdown-menu li:nth-child(2),
+.has-dropdown:focus-within .dropdown-menu li:nth-child(2) {
+  transition-delay: 0.08s;
+}
+.has-dropdown:hover .dropdown-menu li:nth-child(3),
+.has-dropdown:focus-within .dropdown-menu li:nth-child(3) {
+  transition-delay: 0.12s;
+}
+.has-dropdown:hover .dropdown-menu li:nth-child(4),
+.has-dropdown:focus-within .dropdown-menu li:nth-child(4) {
+  transition-delay: 0.16s;
 }
 
 .dropdown-item {
@@ -522,7 +607,7 @@ p {
   font-weight: 500;
   color: rgba(241, 227, 194, 0.9);
   border-radius: var(--radius-sm);
-  transition: all 0.2s ease;
+  transition: all 0.2s var(--ease-out-expo);
   white-space: nowrap;
 }
 
@@ -530,7 +615,7 @@ p {
 .dropdown-item.active {
   background-color: rgba(178, 166, 103, 0.2);
   color: var(--color-sandstone-light);
-  transform: translateX(4px);
+  transform: translateX(6px);
 }
 
 .nav-cta-btn {
@@ -727,16 +812,85 @@ p {
   align-items: center;
   padding-top: calc(var(--header-height) + 40px);
   padding-bottom: 80px;
-  background: linear-gradient(180deg, rgba(32, 56, 60, 0.78) 0%, rgba(32, 56, 60, 0.88) 100%),
-    url('/images/hero-paddy.jpg') center/cover no-repeat fixed;
+  background-color: var(--color-deep-pine);
   color: var(--color-white);
   overflow: hidden;
+}
+
+/* Ken Burns background layer */
+.hero-bg-layer {
+  position: absolute;
+  top: -8%;
+  left: -8%;
+  width: 116%;
+  height: 116%;
+  background: linear-gradient(180deg, rgba(32, 56, 60, 0.78) 0%, rgba(32, 56, 60, 0.88) 100%),
+    url('/images/hero-paddy.jpg') center/cover no-repeat;
+  z-index: 1;
+  pointer-events: none;
+  animation: kenBurnsHero 28s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+@keyframes kenBurnsHero {
+  0% {
+    transform: scale(1) translate3d(0, 0, 0);
+  }
+  50% {
+    transform: scale(1.08) translate3d(-1.5%, -1%, 0);
+  }
+  100% {
+    transform: scale(1.04) translate3d(1%, -1.5%, 0);
+  }
 }
 
 .hero-content {
   position: relative;
   z-index: 2;
   max-width: 820px;
+}
+
+/* Sequential Cinematic Entrance */
+.hero-section .hero-tag,
+.hero-section .hero-title,
+.hero-section .hero-subtitle,
+.hero-section .hero-cta-group {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.85s var(--ease-out-expo), transform 0.85s var(--ease-out-expo);
+}
+
+.hero-section.hero-animating .hero-tag {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.1s;
+}
+
+.hero-section.hero-animating .hero-title {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.3s;
+}
+
+.hero-section.hero-animating .hero-subtitle {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.55s;
+}
+
+.hero-section.hero-animating .hero-cta-group {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.78s;
+}
+
+.hero-section.hero-visible .hero-tag,
+.hero-section.hero-visible .hero-title,
+.hero-section.hero-visible .hero-subtitle,
+.hero-section.hero-visible .hero-cta-group {
+  opacity: 1;
+  transform: none;
+  transition: none;
 }
 
 .hero-tag {
@@ -1548,14 +1702,18 @@ p {
   background-color: var(--color-sandstone-subtle);
   font-size: 0.98rem;
   color: var(--color-dark-bark);
-  transition: all var(--transition-fast);
+  transition: border-color 0.25s ease,
+              box-shadow 0.28s var(--ease-out-expo),
+              background-color 0.25s ease,
+              transform 0.25s var(--ease-spring);
 }
 
 .form-control:focus {
   outline: none;
   border-color: var(--color-deep-pine);
   background-color: var(--color-white);
-  box-shadow: 0 0 0 3px rgba(32, 56, 60, 0.12);
+  box-shadow: 0 0 0 4px rgba(32, 56, 60, 0.16), 0 4px 14px rgba(32, 56, 60, 0.06);
+  transform: translateY(-1px);
 }
 
 textarea.form-control {
@@ -2617,4 +2775,169 @@ textarea.form-control {
   font-size: 0.95rem;
   color: var(--color-dark-bark-muted);
   line-height: 1.6;
+}
+
+/* ==========================================================================
+   PREMIUM MOTION DESIGN & ANIMATION SYSTEM
+   ========================================================================== */
+
+/* 1. Scroll-Reveal Classes — only hidden when JS animations engine is active */
+html.js-animations .reveal {
+  opacity: 0;
+  transform: translateY(36px) scale(0.97);
+  transition: opacity 0.8s var(--ease-out-expo),
+              transform 0.8s var(--ease-out-expo);
+  will-change: opacity, transform;
+}
+
+.reveal.is-revealed {
+  opacity: 1 !important;
+  transform: translateY(0) scale(1) !important;
+}
+
+.reveal-heading {
+  overflow: hidden;
+}
+
+html.js-animations .reveal-heading > * {
+  display: block;
+  transform: translateY(110%);
+  opacity: 0;
+  transition: transform 0.85s var(--ease-out-expo),
+              opacity 0.85s var(--ease-out-expo);
+}
+
+.reveal-heading.is-revealed > * {
+  transform: translateY(0) !important;
+  opacity: 1 !important;
+}
+
+/* 2. Staggered Grids & Items — only hidden when JS animations engine is active */
+html.js-animations .stagger-item {
+  opacity: 0;
+  transform: translateY(36px) scale(0.97);
+  transition: opacity 0.7s var(--ease-out-expo),
+              transform 0.7s var(--ease-out-expo);
+  transition-delay: calc(var(--stagger-index, 0) * 110ms);
+  will-change: opacity, transform;
+}
+
+.stagger-container.is-revealed .stagger-item,
+.stagger-item.is-revealed {
+  opacity: 1 !important;
+  transform: translateY(0) scale(1) !important;
+}
+
+/* 3. Card Micro-Interactions: Spring Lift & Shadow */
+.feature-box,
+.product-card,
+.value-flow-card,
+.leader-card,
+.cert-card,
+.blog-card,
+.support-card,
+.gallery-item {
+  transition: transform 0.4s var(--ease-spring),
+              box-shadow 0.4s var(--ease-out-expo),
+              border-color 0.3s ease !important;
+}
+
+.feature-box:hover,
+.product-card:hover,
+.value-flow-card:hover,
+.leader-card:hover,
+.cert-card:hover,
+.blog-card:hover,
+.support-card:hover {
+  transform: translateY(-8px) scale(1.025) !important;
+  box-shadow: 0 20px 38px -10px rgba(32, 56, 60, 0.22), 0 8px 16px -4px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Card inner icon tilt and zoom */
+.feature-box:hover .feature-icon-circle svg,
+.value-flow-card:hover svg,
+.support-card:hover svg {
+  transform: scale(1.14) rotate(5deg);
+  transition: transform 0.35s var(--ease-spring);
+}
+
+.feature-icon-circle svg,
+.value-flow-card svg,
+.support-card svg {
+  transition: transform 0.35s var(--ease-out-expo);
+}
+
+/* 4. Animated Link Underline */
+.nav-menu > li > a.nav-link:not(.nav-cta-btn),
+.footer-col ul li a {
+  position: relative;
+  display: inline-block;
+}
+
+.nav-menu > li > a.nav-link:not(.nav-cta-btn)::after,
+.footer-col ul li a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-olive-clay);
+  transition: width 0.3s var(--ease-out-expo);
+}
+
+.nav-menu > li > a.nav-link:not(.nav-cta-btn):hover::after,
+.nav-menu > li > a.nav-link.active::after,
+.footer-col ul li a:hover::after {
+  width: 100%;
+}
+
+/* 5. Stat Counter Number Highlight */
+.stat-number {
+  display: inline-block;
+  font-variant-numeric: tabular-nums;
+  transition: transform 0.3s var(--ease-spring);
+}
+
+.stat-item:hover .stat-number {
+  transform: scale(1.06);
+}
+
+/* 6. Parallax Container */
+.parallax-bg {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: background-position 0.1s ease-out;
+}
+
+/* 7. Accessibility - Reduced Motion Fallback */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+
+  body,
+  html.js-animations body,
+  .hero-bg-layer,
+  .reveal,
+  html.js-animations .reveal,
+  .reveal-heading > *,
+  html.js-animations .reveal-heading > *,
+  .stagger-item,
+  html.js-animations .stagger-item,
+  .hero-section .hero-tag,
+  .hero-section .hero-title,
+  .hero-section .hero-subtitle,
+  .hero-section .hero-cta-group {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+    animation: none !important;
+  }
 }
