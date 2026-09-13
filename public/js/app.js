@@ -389,7 +389,6 @@ const SHARED_FOOTER_HTML = `
     <div class="footer-bottom">
       <p style="color: var(--color-sandstone);">© 2026 Hiranyakeshi Agrotech Pvt. Ltd. All Rights Reserved.</p>
       <div style="display:flex; gap:16px; flex-wrap:wrap;">
-        <a href="/privacy-policy">Privacy Policy</a>
         <a href="/support">Support</a>
       </div>
     </div>

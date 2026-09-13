@@ -598,7 +598,6 @@ app.get('/blog/:slug', (req, res) => res.sendFile(path.join(__dirname, 'public',
 app.get('/blog-post', (req, res) => res.sendFile(path.join(__dirname, 'public', 'blog-post.html')));
 app.get('/contact', (req, res) => res.sendFile(path.join(__dirname, 'public', 'contact.html')));
 app.get('/support', (req, res) => res.sendFile(path.join(__dirname, 'public', 'support.html')));
-app.get('/privacy-policy', (req, res) => res.sendFile(path.join(__dirname, 'public', 'privacy-policy.html')));
 
 // Protected Admin & Submission Dashboard Pages
 app.get([

@@ -371,10 +371,12 @@
     if (copyrightP) copyrightP.textContent = getTranslation('footer_copyright', lang) || copyrightP.textContent;
 
     const bottomLinks = footer.querySelectorAll('.footer-bottom a');
-    if (bottomLinks.length >= 2) {
-      bottomLinks[0].textContent = getTranslation('footer_privacy', lang) || bottomLinks[0].textContent;
-      bottomLinks[1].textContent = getTranslation('footer_terms', lang) || bottomLinks[1].textContent;
-    }
+    bottomLinks.forEach(link => {
+      if (link.getAttribute('href') === '/support') {
+        link.textContent = getTranslation('footer_terms', lang) || link.textContent;
+      }
+    });
+
   }
 
   // Initialize i18n
